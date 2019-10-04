@@ -26,6 +26,11 @@
     <%= f.text_field :content %>
   </div>
 
+  <div class="field">
+    <%= f.label :bodycolor %>
+    <%= f.select :bodycolor, Bodycolor.all.pluck(:id, :name) %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

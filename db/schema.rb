@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_04_160056) do
+ActiveRecord::Schema.define(version: 2019_10_04_182954) do
 
   create_table "bodycolors", force: :cascade do |t|
     t.string "name"
@@ -28,7 +28,9 @@ ActiveRecord::Schema.define(version: 2019_10_04_160056) do
     t.boolean "recycled", default: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "user_id", null: false
     t.index ["bodycolor_id"], name: "index_notes_on_bodycolor_id"
+    t.index ["user_id"], name: "index_notes_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -45,4 +47,5 @@ ActiveRecord::Schema.define(version: 2019_10_04_160056) do
   end
 
   add_foreign_key "notes", "bodycolors"
+  add_foreign_key "notes", "users"
 end

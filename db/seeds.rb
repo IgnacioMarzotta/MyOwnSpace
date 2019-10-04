@@ -8,13 +8,13 @@
 Bodycolor.destroy_all
 User.destroy_all
 
-Bodycolor.create(name: 'Dark', value: 'bg-dark text-white')
-Bodycolor.create(name: 'White', value: 'bg-light text-dark')
-Bodycolor.create(name: 'Blue', value: 'bg-primary text-white')
-
 20.times do |i|
     User.create(
         username: Faker::Internet.username,
         email: Faker::Internet.email,
         password: 123456)
-end
+    end
+    
+Bodycolor.create(name: 'Dark', value: 'bg-dark text-white')
+Bodycolor.create(name: 'White', value: 'bg-light text-dark')
+Bodycolor.create(name: 'Blue', value: 'bg-primary text-white')
