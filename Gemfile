@@ -24,7 +24,7 @@ gem 'jbuilder', '~> 2.7'
 
 gem 'actiontext'
 
-gem 'sqlite3'
+gem 'pg'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
