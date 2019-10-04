@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Shared note:</strong>
+  <%= @note.shared_note_id %>
+</p>
+
+<p>
+  <strong>Bodycolor:</strong>
+  <%= @note.bodycolor_id %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @note.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @note.description %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @note.content %>
+</p>
+
+<p>
+  <strong>Selected:</strong>
+  <%= @note.selected %>
+</p>
+
+<p>
+  <strong>Recycled:</strong>
+  <%= @note.recycled %>
+</p>
+
+<%= link_to 'Edit', edit_note_path(@note) %> |
+<%= link_to 'Back', notes_path %>

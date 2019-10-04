@@ -1,0 +1,2 @@
+class Bodycolor < ApplicationRecord
+end

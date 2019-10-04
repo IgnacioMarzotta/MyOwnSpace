@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  shared_note: one
+  bodycolor: one
+  title: MyString
+  description: MyString
+  content: MyString
+  selected: false
+  recycled: false
+
+two:
+  shared_note: two
+  bodycolor: two
+  title: MyString
+  description: MyString
+  content: MyString
+  selected: false
+  recycled: false
