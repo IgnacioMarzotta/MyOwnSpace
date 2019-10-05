@@ -14,7 +14,14 @@ Bodycolor.destroy_all
         email: Faker::Internet.email,
         password: 123456)
     end
-
+    
 Bodycolor.create(name: 'Dark', value: 'bg-dark text-white')
-Bodycolor.create(name: 'White', value: 'bg-light text-dark')
+Bodycolor.create(name: 'White', value: 'bg-light text-dark border border-dark')
 Bodycolor.create(name: 'Blue', value: 'bg-primary text-white')
+
+20.times do |i|
+    Note.create(title: "Note n°#{i}",
+                description: "I'm note n°#{i}'s description",
+                content: "This should be a lorem ipsum for note n°#{i}'s content"
+    )
+

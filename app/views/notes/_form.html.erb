@@ -28,7 +28,7 @@
 
   <div class="field">
     <%= f.label :bodycolor_id %>
-    <%= f.select :bodycolor_id, Bodycolor.all.pluck(:name, :id) %>
+    <%= f.select :bodycolor_id, Bodycolor.all.collect{|x| [x.name, x.id]}, id: :note_bodycolor_id, prompt: "Select a colour" %>
   </div>
 
   <div class="actions">

@@ -4,7 +4,7 @@ class NotesController < ApplicationController
   # GET /notes
   # GET /notes.json
   def index
-    @notes = Note.all
+    @nonrecycled_notes = Note.where(recycled: false)
   end
 
   # GET /notes/1
@@ -70,6 +70,6 @@ class NotesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def note_params
-      params.require(:note).permit(:bodycolor_id, :title, :description, :content)
+      params.require(:note).permit(:title, :description, :content, :bodycolor_id)
     end
 end
