@@ -27,8 +27,8 @@
   </div>
 
   <div class="field">
-    <%= f.label :bodycolor %>
-    <%= f.select :bodycolor, Bodycolor.all.pluck(:id, :name) %>
+    <%= f.label :bodycolor_id %>
+    <%= f.select :bodycolor_id, Bodycolor.all.pluck(:name, :id) %>
   </div>
 
   <div class="actions">

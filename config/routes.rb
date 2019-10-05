@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'bodycolor/create'
   devise_for :users
   resources :notes
   post 'users/:user_id/notes', to: 'notes#create'

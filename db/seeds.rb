@@ -5,8 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Bodycolor.destroy_all
 User.destroy_all
+Bodycolor.destroy_all
 
 20.times do |i|
     User.create(
@@ -14,7 +14,7 @@ User.destroy_all
         email: Faker::Internet.email,
         password: 123456)
     end
-    
+
 Bodycolor.create(name: 'Dark', value: 'bg-dark text-white')
 Bodycolor.create(name: 'White', value: 'bg-light text-dark')
 Bodycolor.create(name: 'Blue', value: 'bg-primary text-white')
