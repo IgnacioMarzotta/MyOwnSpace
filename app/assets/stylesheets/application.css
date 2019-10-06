@@ -13,3 +13,93 @@
  *= require_tree .
  *= require_self
  */
+
+ body
+ {
+     background-image: url('Background1.jpg')
+ }
+ 
+ table
+ {
+     margin-top: -2%;
+ }
+ 
+ 
+ /* PROPERTIES */
+ 
+ 
+ .responsiveCal 
+ {
+     position: relative; padding-bottom: 75%; height: 0; overflow: hidden;
+ }
+      
+ .responsiveCal iframe 
+ {     
+     position: absolute; top:0; left: 0; width: 100%; height: 100%;     
+ }
+ 
+ .empty-recycling-bin
+ {
+     align-content: center;
+     align-items: center;
+     text-align: center;
+ }
+ 
+ .bg-faded-blue
+ {
+     background-image: linear-gradient(to right, #0036FF, #008DEB, #0DFBFF);
+ }
+ 
+ .bg-faded-green
+ {
+     background-image: linear-gradient(to right, #1AFF00, #01EB4C, #00FFB7);
+ }
+ 
+ .bg-faded-red
+ {
+     background-image: linear-gradient(to right, #EB0800, #E04200, #FF5500);
+ }
+ 
+ .bg-faded-grey
+ {
+     background-image: linear-gradient(to right, #BABFBA, #7C807C, #3E403E);
+ }
+ 
+ .card
+ {
+     margin-bottom: 2%;
+ }
+ 
+ .form-group
+ {
+     padding-left: 3%;
+     padding-right: 3%;
+ }
+ 
+ .form-margin
+ {
+     margin-left: 10%;
+     margin-right: 10%;
+     margin-top: 1%;
+ }
+ 
+ .form-params
+ {
+     margin-left: 3%;
+     margin-right: 3%;
+ }
+ 
+ .notice
+ {
+     color: #ffffff;
+     background-color: #343A40;
+     text-align: center;
+     margin-left: 30%;
+     margin-right: 30%;
+ }
+ 
+ .show-note-title
+ {
+     color: #ffffff;
+ }
+ 
