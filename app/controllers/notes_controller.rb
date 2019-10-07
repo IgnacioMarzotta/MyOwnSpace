@@ -4,7 +4,7 @@ class NotesController < ApplicationController
   # GET /notes
   # GET /notes.json
   def index
-    @nonrecycled_notes = Note.where(recycled: false)
+    @nonrecycled_notes = Note.where(user: current_user)
   end
 
   # GET /notes/1

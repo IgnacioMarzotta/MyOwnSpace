@@ -1,32 +1,12 @@
-<p>
-  <strong>Bodycolor:</strong>
-  <%= @note.bodycolor_id %>
-</p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @note.title %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @note.description %>
-</p>
-
-<p>
-  <strong>Content:</strong>
-  <%= @note.content %>
-</p>
-
-<p>
-  <strong>Selected:</strong>
-  <%= @note.selected %>
-</p>
-
-<p>
-  <strong>Recycled:</strong>
-  <%= @note.recycled %>
-</p>
-
-<%= link_to 'Edit', edit_note_path(@note) %>
-<%= link_to 'Back', notes_path %>
+<div class="form-margin">
+  <div class="card <%= @note.bodycolor.value%>">
+    <div class="card-header">
+      <h1 class="display-4"><%= @note.title%></h1>
+    </div>
+    <div class="card-body">
+      <h5 class="card-text"><%= @note.description%></h5>
+      <hr class="my-4">
+      <p class="card-text"><%= @note.content %></p>
+    </div>
+  </div>
+</div>

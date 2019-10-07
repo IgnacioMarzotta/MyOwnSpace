@@ -45,6 +45,11 @@
      text-align: center;
  }
  
+ .bg-lighter
+ {
+     background-color: #BABFBA;
+ }
+
  .bg-faded-blue
  {
      background-image: linear-gradient(to right, #0036FF, #008DEB, #0DFBFF);

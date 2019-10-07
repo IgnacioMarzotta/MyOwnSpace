@@ -1,33 +1,24 @@
 <div class="form-margin">
   <%= form_with(model: @note, local: true) do |f| %>
-    <div class="jumbotron jumbotron-fluid border border-light bg-light text-dark">
+    <div class="jumbotron jumbotron-fluid border border-light bg-lighter text-dark">
       <div class="form-group">
         <div class="form-row">
-          <div class="col-md-10 mb-3">
-            <label for="exampleInputEmail1">Title</label>
-            <br>
-            <%= f.text_field :title, class: "form-control"%>
-            <small id="emailHelp" class="form-text text-muted">* Can't be empty</small>
+          <div class="col-md-10 mb-2">
+            <%= f.text_field :title, class: "form-control", placeholder: "Title" %>
           </div>
-          <div class="col-md-2 mb-3">
-            <label for="exampleInputEmail1">Note color </label>
-            <br>
-            <%= f.select :bodycolor_id, Bodycolor.all.collect{|x| [x.name, x.id]}, id: :note_bodycolor_id, prompt: "Select a colour", class: 'form-control' %>
+          <div zclass="col-md-2 mb-2 form-control">
+            <%= f.select :bodycolor_id, Bodycolor.all.collect{|x| [x.name, x.id]}, id: :note_bodycolor_id, prompt: "Select a colour" %>
+          </div>
         </div>
       </div>
       <div class="form-group">
-        <label for="exampleInputEmail1">Description</label>
+        <%= f.text_field :description, class: "form-control", placeholder: "Description" %>
         <br>
-        <%= f.text_field :description, class: "form-control"%>
-        <br>
-        <label for="exampleInputEmail1">Content</label>
-        <br>
-        <%= f.rich_text_area :content%>
-        <small id="emailHelp" class="form-text text-muted">* Can't be empty</small>
+        <%= f.rich_text_area :content, placeholder: "Content"%>
       </div>
       <br>
       <div class ="form-group">
-        <%= f.submit :DONE, class: "btn btn-primary"%>
+        <%= f.submit :DONE, class: "btn btn-outline-primary"%>
       </div>
     </div>
   <% end %>
