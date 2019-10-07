@@ -5,23 +5,23 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-User.destroy_all
+Note.destroy_all
 Bodycolor.destroy_all
+User.destroy_all
 
-20.times do |i|
+10.times do |i|
     User.create(
         username: Faker::Internet.username,
         email: Faker::Internet.email,
         password: 123456)
-    end
-    
-Bodycolor.create(name: 'Dark', value: 'bg-dark text-white')
-Bodycolor.create(name: 'White', value: 'bg-light text-dark border border-dark')
-Bodycolor.create(name: 'Blue', value: 'bg-primary text-white')
+end
 
-20.times do |i|
-    Note.create(title: "Note n°#{i}",
-                description: "I'm note n°#{i}'s description",
-                content: "This should be a lorem ipsum for note n°#{i}'s content"
-    )
-
+Bodycolor.create(name: 'Yellow', value: 'bg-card-yellow border-top-yellow text-dark')
+Bodycolor.create(name: 'White', value: 'bg-card-white border-top-white text-dark')
+Bodycolor.create(name: 'Grey', value: 'bg-card-grey border-top-grey text-dark')
+Bodycolor.create(name: 'Black', value: 'bg-card-black border-top-black text-dark')
+Bodycolor.create(name: 'Blue', value: 'bg-card-blue border-top-blue text-dark')
+Bodycolor.create(name: 'Green', value: 'bg-card-green border-top-green text-dark')
+Bodycolor.create(name: 'Orange', value: 'bg-card-orange border-top-orange text-dark')
+Bodycolor.create(name: 'Red', value: 'bg-card-red border-top-red text-dark')
+Bodycolor.create(name: 'Purple', value: 'bg-card-purple border-top-purple text-dark')

@@ -1,13 +1,13 @@
 <div class="form-margin">
   <%= form_with(model: @note, local: true) do |f| %>
-    <div class="jumbotron jumbotron-fluid border border-light bg-lighter text-dark">
+    <div class="jumbotron jumbotron-fluid border border-light bg-light text-dark">
       <div class="form-group">
         <div class="form-row">
           <div class="col-md-10 mb-2">
             <%= f.text_field :title, class: "form-control", placeholder: "Title" %>
           </div>
-          <div zclass="col-md-2 mb-2 form-control">
-            <%= f.select :bodycolor_id, Bodycolor.all.collect{|x| [x.name, x.id]}, id: :note_bodycolor_id, prompt: "Select a colour" %>
+          <div class="col-md-2 mb-2">
+            <%= f.select :bodycolor_id, Bodycolor.all.collect{|x| [x.name, x.id]}, {}, prompt: "Select a colour", class: "form-control", id: :note_bodycolor_id %>
           </div>
         </div>
       </div>

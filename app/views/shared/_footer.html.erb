@@ -1,21 +1,67 @@
 <% if(user_signed_in?) %>
-<br>
-<br>
-<nav class="navbar navbar-expand-lg fixed-bottom navbar-dark bg-dark">
-  <ul class="navbar-nav mx-auto">
-    <li class="nav-item">
-      <a href='<%= new_note_path %>'><%= image_tag 'key.png', width: 42, height: 42 %></a>
-    </li>
-  </ul>
-  <ul class="navbar-nav mx-auto">
-    <li class="nav-item">
-      <a href='<%= notes_path %>'><%= image_tag 'notepad.png', width: 42, height: 42 %></a>
-    </li>
-  </ul>
-  <ul class="navbar-nav mx-auto">
-    <li class="nav-item">
-      <a href='<%= root_path %>'><%= image_tag 'calendar.png', width: 42, height: 42 %></a>
-    </li>
-  </ul>
-</nav>
+  <br>
+  <br>
+  <nav class="navbar navbar-expand-lg fixed-bottom navbar-dark bg-dark">
+    <ul class="navbar-nav mx-auto">
+      <li class="nav-item">
+        <a href='<%= new_note_path %>'><%= image_tag 'key.png', width: 36, height: 36 %></a>
+      </li>
+    </ul>
+    <ul class="navbar-nav mx-auto">
+      <li class="nav-item">
+        <a href='<%= notes_path %>'><%= image_tag 'notepad.png', width: 36, height: 36 %></a>
+      </li>
+    </ul>
+    <ul class="navbar-nav mx-auto">
+      <li class="nav-item">
+        <a href='<%= root_path %>'><%= image_tag 'calendar.png', width: 36, height: 36 %></a>
+      </li>
+    </ul>
+  </nav>
+<% else %>
+  <br>
+  <br>
+  <footer class="section footer-classic context-dark bg-footer" style="background: #2d3246;">
+    <br>
+    <div class="container">
+      <div class="row row-30">
+        <div class="col-md-4 col-xl-5">
+          <div class="pr-xl-4"><a class="brand" href="index.html"><img class="brand-logo-light" src="images/agency/logo-inverse-140x37.png" alt="" width="140" height="37" srcset="images/agency/logo-retina-inverse-280x74.png 2x"></a>
+            <p>MyOwnSpace, your own space, for anything you need</p>
+            <!-- Rights-->
+            <p class="rights"><span>© </span><span class="copyright-year">2019</span><span> </span><span>Ignacio Marzotta</span><span>. </span><span>All Rights Reserved.</span></p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <h5>Contact</h5>
+          <dl class="contact-list">
+            <dt>Email</dt>
+            <dd>ignaciomarzotta@gmail.com</dd>
+          </dl>
+          <dl class="contact-list">
+            <dt>Call Center</dt>
+            <dd>+1 341 482 2425</dd>
+          </dl>
+        </div>
+        <div class="col-md-4 col-xl-3">
+          <h5>Links</h5>
+          <ul class="nav-list">
+            <li><%= link_to 'Home', root_path %></li>
+          </ul>
+          <ul class="nav-list">
+            <li><%= link_to 'Calendar', root_path %></li>
+          </ul>
+          <ul class="nav-list">
+            <li><%= link_to 'Notes', root_path %></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="row no-gutters social-container">
+      <div class="col"><a class="social-inner" href="https://www.facebook.com/PrevencionACHS"><h3><i class="fab fa-facebook-square"></i></h3></a></div>
+      <div class="col"><a class="social-inner" href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=6&cad=rja&uact=8&ved=2ahUKEwjH-92mv_PkAhVtIbkGHVEjCbEQFjAFegQIAhAB&url=https%3A%2F%2Fwww.instagram.com%2Fseguritoachs%2F%3Fhl%3Des-la&usg=AOvVaw3rpKJYcn7-52hClk7ioBCT"><h3><i class="fab fa-instagram"></i></h3></a></div>
+      <div class="col"><a class="social-inner" href="https://twitter.com/PrevencionACHS"><h3><i class="fab fa-twitter-square"></i></h3></a></div>
+      <div class="col"><a class="social-inner" href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=2ahUKEwiL6_Gev_PkAhVdErkGHYRhBBcQFjAAegQIAhAB&url=https%3A%2F%2Fwww.pinterest.cl%2Fprevencionachs%2F&usg=AOvVaw1zzhPKk1SqW8l4pclbt79E"><h3><i class="fab fa-pinterest-square"></i></h3></a></div>
+    </div>
+  </footer>
 <% end %>
