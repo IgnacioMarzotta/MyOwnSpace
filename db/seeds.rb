@@ -9,7 +9,7 @@ Note.destroy_all
 Bodycolor.destroy_all
 User.destroy_all
 
-10.times do |i|
+10.times do
     User.create(
         username: Faker::Internet.username,
         email: Faker::Internet.email,
