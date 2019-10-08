@@ -1,18 +1,23 @@
-<% @nonrecycled_notes.each_slice(4) do |four_notes| %>
-  <div class="row mx-auto">
-    <% four_notes.each do |note|%>
-        <div class="card mx-auto rounded-bottom <%= note.bodycolor.value%>" style="width: 18rem;">
-          <div class="card-header"><h5 class="card-title"><b><%= note.title%></b></h5></div>
-          <div class="card-body">
-            <p class="card-text"><%= note.description %></p>
-            <a href='<%= edit_note_path(note) %>' class="card-link"><%= image_tag 'edit.png', width: 28, height: 28 %></a>
-            <%=link_to image_tag("view.png", width: 28, height: 28), note, class: 'card-link' %>
+<% if (@nonrecycled_notes.count == 0) %>
+  <h1>It seems that you don't have any notes!</h1>
+  <%= link_to 'Create your first note!', new_note_path %>
+<% else %>
+  <% @nonrecycled_notes.each_slice(4) do |four_notes| %>
+    <div class="row mx-auto">
+      <% four_notes.each do |note|%>
+          <div class="card mx-auto rounded-bottom <%= note.bodycolor.value%>" style="width: 18rem;">
+            <div class="card-header"><h5 class="card-title"><b><%= note.title%></b></h5></div>
+            <div class="card-body">
+              <p class="card-text"><%= note.description %></p>
+              <a href='<%= edit_note_path(note) %>' class="card-link"><%= image_tag 'edit.png', width: 28, height: 28 %></a>
+              <%=link_to image_tag("view.png", width: 28, height: 28), note, class: 'card-link' %>
+            </div>
+            <div class="card-footer">
+              <small class="text-dark"> Last update: <%= note.updated_at.localtime%></small>
+            </div>
           </div>
-          <div class="card-footer">
-            <small class="text-dark"> Last update: <%= note.updated_at.localtime%></small>
-          </div>
-        </div>
-    <% end %>
-  </div>
+      <% end %>
+    </div>
+  <% end %>
+  <br>
 <% end %>
-<br>

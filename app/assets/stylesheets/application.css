@@ -17,15 +17,13 @@
 /*******************************************************************************/
 /* ATTRIBUTES */
 
-body
-{
-    background-image: url('Background1.jpg');
-}
-
 table
 {
     margin-top: -2%;
 }
+
+/*******************************************************************************/
+/* PROPERTIES */
 
 .card
 {
@@ -65,8 +63,16 @@ table
     color: #ffffff;
 }
 
-/*******************************************************************************/
-/* PROPERTIES */
+.border-bottom-navbar
+{
+    border-bottom: 2px solid #FC6E20!important;
+}
+
+.border-top-footer
+{
+    border-top: 2px solid #FC6E20!important;
+}
+
 
 /**********************/
 /* CARD BORDER COLORS */
@@ -187,6 +193,15 @@ table
 .bg-faded-grey
 {
     background-image: linear-gradient(to right, #BABFBA, #7C807C, #3E403E);
+}
+
+/*************************/
+/* INDIVIDUAL PAGE STYLE */
+/*************************/
+
+.landing-style
+{
+    background: repeating-linear-gradient(132deg, rgba(255,255,255,1) 0%, rgba(255,90,0,1) 100%);
 }
 
 /****************/
