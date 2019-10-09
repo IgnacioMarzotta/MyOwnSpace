@@ -1,6 +1,14 @@
+<style>
+  body
+  {
+    background: rgb(21,0,60);
+    background: linear-gradient(203deg, rgba(21,0,60,1) 0%, rgba(22,49,101,0.7147233893557423) 39%, rgba(110,48,0,1) 100%);  
+  }
+</style>
+
 <div class="form-margin">
   <%= form_with(model: @note, local: true) do |f| %>
-    <div class="jumbotron jumbotron-fluid border border-light <%= note.bodycolor%>">
+    <div class="jumbotron jumbotron-fluid border border-light <%= note.bodycolor.value %>">
       <div class="form-group">
         <div class="form-row">
           <div class="col-md-10 mb-3">
@@ -11,7 +19,7 @@
           <div class="col-md-2 mb-3">
             <label for="exampleInputEmail1">Note color </label>
             <br>
-            <%= f.select :bodycolor_id, Bodycolor.all.collect{|x| [x.name, x.id]}, id: :note_bodycolor_id, prompt: "Select a colour", class: "form-control"%>
+            <%= f.select :bodycolor_id, Bodycolor.all.collect{|x| [x.name, x.id]}, {}, class: "form-control", id: :note_bodycolor_id, prompt: "Select a colour", class: "form-control"%>
         </div>
       </div>
       <div class="form-group">

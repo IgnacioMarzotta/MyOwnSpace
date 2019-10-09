@@ -1,6 +1,14 @@
+<style>
+  body
+  {
+    background: rgb(21,0,60);
+    background: linear-gradient(203deg, rgba(21,0,60,1) 0%, rgba(22,49,101,1) 39%, rgba(255,111,0,1) 100%);
+  }
+</style>
+
 <div class="form-margin">
   <%= form_with(model: @note, local: true) do |f| %>
-    <div class="jumbotron jumbotron-fluid border border-light bg-light text-dark">
+    <div class="jumbotron jumbotron-fluid bg-card-yellow border-top-yellow text-dark">
       <div class="form-group">
         <div class="form-row">
           <div class="col-md-10 mb-2">
@@ -14,7 +22,7 @@
       <div class="form-group">
         <%= f.text_field :description, class: "form-control", placeholder: "Description" %>
         <br>
-        <%= f.rich_text_area :content, placeholder: "Content"%>
+        <%= f.rich_text_area :content, placeholder: "Content" %>
       </div>
       <br>
       <div class ="form-group">

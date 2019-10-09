@@ -22,11 +22,6 @@ table
     margin-top: -2%;
 }
 
-body
-{
-    background-image: url('Background1.jpg');
-}
-
 /*******************************************************************************/
 /* PROPERTIES */
 
@@ -66,6 +61,27 @@ body
 .show-note-title
 {
     color: #ffffff;
+}
+
+.brand-color
+{
+    background-image: linear-gradient(to left, #FFBA0D, #E8930C, #FF7C00, #E8560C);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.dropdown-separator
+{
+    border-top: 1px solid #FC6E20!important;
+}
+
+.border-dropdown
+{
+    border-top: 1px solid #FC6E20!important;
+    border-bottom: 1px solid #FC6E20!important;
+    border-right: 1px solid #FC6E20!important;
+    border-left: 1px solid #FC6E20!important;
 }
 
 .border-bottom-navbar

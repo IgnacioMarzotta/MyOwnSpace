@@ -1,32 +1,32 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom-navbar">
-  <%= link_to  "MyOwnSpace", root_path, class: 'navbar-brand nav-link disabled' %>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavDropdown">
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a href='<%= root_path %>' class="nav-link"><%= image_tag 'home.png', width: 18, height: 18 %></a>
-      </li>
-      <li class="nav-item dropdown ml-3">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Cuenta
-        </a>
-        <div class="dropdown-menu">
+  <ul class="navbar-nav mx-auto">
+    <li class="nav-item">
+      <%= link_to  "MyOwnSpace", root_path, class: 'navbar-brand disabled brand-color' %>
+    </li>
+  </ul>
+  <ul class="navbar-nav mx-auto">
+    <li class="nav-item">
+      <a href='<%= root_path %>' class="nav-link"><%= image_tag 'home.png', width: 18, height: 18 %></a>
+    </li>
+  </ul>
+  <ul class="navbar-nav dropdown mx-auto">
+    <li class="nav-item">
+      <a class="nav-link btn btn-sm btn-outline-secondary dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Cuenta
+      </a>
+      <div class="dropdown-menu border-dropdown">
         <% if user_signed_in? %>
-          <%= link_to 'Salir', destroy_user_session_path, method: :delete, class: 'dropdown-item' %>
+          <%= link_to 'My Profile', root_path, class: 'dropdown-item' %>
+          <%= link_to 'Friends', root_path, class: 'dropdown-item' %>
+          <%= link_to 'Configuraion', root_path, class: 'dropdown-item' %>
+          <hr class="dropdown-separator">
+          <%= link_to 'Log-out', destroy_user_session_path, method: :delete, class: 'dropdown-item' %>
         <% else %>
-            <%= link_to 'Iniciar sesión', new_user_session_path, class: 'dropdown-item' %>
-            <%= link_to 'Regístrate', new_user_registration_path, class: 'dropdown-item' %>
+          <%= link_to 'Log-in', new_user_session_path, class: 'dropdown-item' %>
+          <%= link_to 'Register', new_user_registration_path, class: 'dropdown-item' %>
         <% end %>
       </div>
-      </li>
-      <% if(current_page? new_note_path) %>
-        <li class="nav-item my-2 my-lg-0">
-          <%= link_to '<< BACK', notes_path, class: 'btn btn-outline-secondary' %>
-        </li>
-      <% end %>
-    </ul>
-  </div>
+    </li>
+  </ul>
 </nav>
 <br>
