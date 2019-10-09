@@ -1,12 +1,3 @@
-<head>
-  <style>
-  body
-  {
-    background-image: url('Background2.png');
-  }
-  </style>
-</head >
-
 <% if (@nonrecycled_notes.count == 0) %>
   <h1>It seems that you don't have any notes!</h1>
   <%= link_to 'Create your first note!', new_note_path %>
