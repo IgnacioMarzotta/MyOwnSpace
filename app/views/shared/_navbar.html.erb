@@ -11,9 +11,7 @@
   </ul>
   <ul class="navbar-nav dropdown mx-auto">
     <li class="nav-item">
-      <a class="nav-link btn btn-sm btn-outline-secondary dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Cuenta
-      </a>
+      <a class="nav-link btn btn-sm btn-outline-secondary dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Account </a>
       <div class="dropdown-menu border-dropdown">
         <% if user_signed_in? %>
           <%= link_to 'My Profile', root_path, class: 'dropdown-item' %>
@@ -29,4 +27,3 @@
     </li>
   </ul>
 </nav>
-<br>

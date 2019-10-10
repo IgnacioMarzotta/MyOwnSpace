@@ -17,6 +17,18 @@
 /*******************************************************************************/
 /* ATTRIBUTES */
 
+.card-columns 
+{
+    @include media-breakpoint-only(lg) 
+    {
+      column-count: 4;
+    }
+    @include media-breakpoint-only(xl) 
+    {
+      column-count: 5;
+    }
+}
+
 table
 {
     margin-top: -2%;
@@ -24,6 +36,11 @@ table
 
 /*******************************************************************************/
 /* PROPERTIES */
+
+.container
+{
+    background-color: #F5F5F5;
+}
 
 .card
 {
@@ -94,6 +111,63 @@ table
     border-top: 2px solid #FC6E20!important;
 }
 
+/*************************/
+/* BODYCOLOR BADGE STYLE */
+/*************************/
+
+.badge-yellow
+{
+    color: #FCDF0E;
+    background-color: #FCDF0E;
+}
+
+.badge-black
+{
+    color: #000000;
+    background-color: #000000;
+}
+
+.badge-grey
+{
+    color: #D1D1D1;
+    background-color: #D1D1D1;
+}
+
+.badge-orange
+{
+    color: #FCA306;
+    background-color: #FCA306;
+}
+
+.badge-red
+{
+    color: #EE413E;
+    background-color: #EE413E;
+}
+
+.badge-green
+{
+    color: #6EC434;
+    background-color: #6EC434;
+}
+
+.badge-purple
+{
+    color: #7637B2;
+    background-color: #7637B2;
+}
+
+.badge-white
+{
+    color: #FFFFFF;
+    background-color: #FFFFFF;
+}
+
+.badge-blue
+{
+    color: #0270CB;
+    background-color: #0270CB;
+}
 
 /**********************/
 /* CARD BORDER COLORS */

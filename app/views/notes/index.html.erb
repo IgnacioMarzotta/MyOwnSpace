@@ -1,11 +1,19 @@
+<style>
+  body
+  {
+    background: rgb(133,209,30);
+    background: linear-gradient(203deg, rgba(133,209,30,1) 0%, rgba(41,144,98,0.7147233893557423) 39%, rgba(201,150,19,1) 100%);
+  }
+</style>
+
 <% if (@nonrecycled_notes.count == 0) %>
   <h1>It seems that you don't have any notes!</h1>
   <%= link_to 'Create your first note!', new_note_path %>
 <% else %>
-  <% @nonrecycled_notes.each_slice(4) do |four_notes| %>
-    <div class="row mx-auto">
-      <% four_notes.each do |note|%>
-          <div class="card mx-auto rounded-bottom <%= note.bodycolor.value%>" style="width: 18rem;">
+  <div class="container border border-secondary">
+    <div class="card-columns m-3">
+      <% @nonrecycled_notes.each do |note|%>
+          <div class="card rounded-bottom m-3 <%= note.bodycolor.value%>" style="width: 18rem;">
             <div class="card-header"><h5 class="card-title"><b><%= note.title%></b></h5></div>
             <div class="card-body">
               <p class="card-text"><%= note.description %></p>
@@ -18,6 +26,5 @@
           </div>
       <% end %>
     </div>
-  <% end %>
-  <br>
+  </div>
 <% end %>

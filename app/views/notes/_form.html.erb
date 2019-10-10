@@ -2,7 +2,7 @@
   body
   {
     background: rgb(21,0,60);
-    background: linear-gradient(203deg, rgba(21,0,60,1) 0%, rgba(22,49,101,0.7147233893557423) 39%, rgba(110,48,0,1) 100%);  
+    background: linear-gradient(203deg, rgba(21,0,60,1) 0%, rgba(22,49,101,0.7147233893557423) 39%, rgba(110,48,0,1) 100%);
   }
 </style>
 
@@ -12,26 +12,19 @@
       <div class="form-group">
         <div class="form-row">
           <div class="col-md-10 mb-3">
-            <label for="exampleInputEmail1">Title</label>
-            <br>
-            <%= f.text_field :title, class: "form-control"%>
+            <%= f.text_field :title, class: "form-control", placeholder: "Title"%>
           </div>
           <div class="col-md-2 mb-3">
-            <label for="exampleInputEmail1">Note color </label>
-            <br>
-            <%= f.select :bodycolor_id, Bodycolor.all.collect{|x| [x.name, x.id]}, {}, class: "form-control", id: :note_bodycolor_id, prompt: "Select a colour", class: "form-control"%>
+            <%=f.select :bodycolor_id, Bodycolor.all.collect{|x| [x.name, x.id]}, {}, class: "form-control", id: :note_bodycolor_id, prompt: "Select a colour", class: "form-control"%>
         </div>
       </div>
       <div class="form-group">
-        <label for="exampleInputEmail1">Description</label>
         <br>
-        <%= f.text_field :description, class: "form-control"%>
+        <%= f.text_field :description, class: "form-control", placeholder: "Description"%>
         <br>
-        <label for="exampleInputEmail1">Content</label>
-        <br>
-        <%= f.rich_text_area :content%>
+        <hr>
+        <%= f.rich_text_area :content, placeholder: "Content"%>
       </div>
-      <br>
       <div class ="form-group">
         <%= f.submit :DONE, class: "btn btn-primary"%>
       </div>
