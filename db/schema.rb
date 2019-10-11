@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_05_183957) do
+ActiveRecord::Schema.define(version: 2019_10_11_175321) do
 
   create_table "action_text_rich_texts", force: :cascade do |t|
     t.string "name", null: false
@@ -50,6 +50,18 @@ ActiveRecord::Schema.define(version: 2019_10_05_183957) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "infos", force: :cascade do |t|
+    t.integer "bodycolor_id", null: false
+    t.string "servicename"
+    t.string "nickname"
+    t.string "email"
+    t.string "password"
+    t.string "content"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["bodycolor_id"], name: "index_infos_on_bodycolor_id"
+  end
+
   create_table "notes", force: :cascade do |t|
     t.integer "bodycolor_id", null: false
     t.string "title"
@@ -78,6 +90,7 @@ ActiveRecord::Schema.define(version: 2019_10_05_183957) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "infos", "bodycolors"
   add_foreign_key "notes", "bodycolors"
   add_foreign_key "notes", "users"
 end

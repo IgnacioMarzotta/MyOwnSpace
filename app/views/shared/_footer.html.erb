@@ -4,17 +4,17 @@
   <nav class="navbar navbar-expand-lg fixed-bottom navbar-dark bg-dark border-top-footer">
     <ul class="navbar-nav mx-auto">
       <li class="nav-item">
-        <a href='<%= new_note_path %>'><%= image_tag 'key.png', width: 36, height: 36 %></a>
+        <%=link_to image_tag("key.png", width: 36, height: 36), infos_path %>
       </li>
     </ul>
     <ul class="navbar-nav mx-auto">
       <li class="nav-item">
-        <a href='<%= notes_path %>'><%= image_tag 'notepad.png', width: 36, height: 36 %></a>
+        <%=link_to image_tag("notepad.png", width: 36, height: 36), notes_path %>
       </li>
     </ul>
     <ul class="navbar-nav mx-auto">
       <li class="nav-item">
-        <a href='<%= root_path %>'><%= image_tag 'calendar.png', width: 36, height: 36 %></a>
+        <%=link_to image_tag("calendar.png", width: 36, height: 36), new_note_path %>
       </li>
     </ul>
   </nav>
