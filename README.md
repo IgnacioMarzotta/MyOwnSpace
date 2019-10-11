@@ -29,4 +29,4 @@ Simplified application initialization(Depending on the platform):
 * Reset the database
 * Run pending migrations
 * Run correspondent seeds
-* Initialize application
+* Initialize application 
