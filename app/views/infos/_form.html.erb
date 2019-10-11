@@ -6,29 +6,31 @@
   }
 </style>
 
-<div class="form-margin">
-  <%= form_with(model: @info, local: true) do |f| %>
-    <div class="jumbotron jumbotron-fluid border border-light <%= info.bodycolor.value %>">
-      <div class="form-group">
-        <div class="form-row">
-          <div class="col-md-10 mb-3">
-            <%= f.text_field :servicename, class: "form-control", placeholder: "Example: Facebook"%>
+<div class="container-fluid" style="height:100vh;">
+  <div class="form-margin">
+    <%= form_with(model: @info, local: true) do |f| %>
+      <div class="jumbotron jumbotron-fluid border border-light <%= info.bodycolor.value %>">
+        <div class="form-group">
+          <div class="form-row">
+            <div class="col-md-10 mb-3">
+              <%= f.text_field :servicename, class: "form-control", placeholder: "Example: Facebook"%>
+            </div>
+            <div class="col-md-2 mb-3">
+              <%= f.select :bodycolor_id, Bodycolor.all.collect{|x| [x.name, x.id]}, {}, class: "form-control", id: :note_bodycolor_id, prompt: "Select a colour"%>
           </div>
-          <div class="col-md-2 mb-3">
-            <%= f.select :bodycolor_id, Bodycolor.all.collect{|x| [x.name, x.id]}, {}, class: "form-control", id: :note_bodycolor_id, prompt: "Select a colour"%>
+        </div>
+        <div class="form-group">
+          <br>
+          <%= f.text_field :username, class: "form-control", placeholder: "Example: james.smith", maxlength: 128 %>
+          <br>
+          <%= f.text_field :email, class: "form-control", placeholder: "Example: james.smith@gmail.com", maxlength: 128 %>
+          <br>
+          <%= f.text_field :password, class: "form-control", placeholder: "Password", maxlength: 128 %>
+        </div>
+        <div class ="form-group">
+          <%= f.submit :DONE, class: "btn btn-primary"%>
         </div>
       </div>
-      <div class="form-group">
-        <br>
-        <%= f.text_field :username, class: "form-control", placeholder: "Example: james.smith", maxlength: 128 %>
-        <br>
-        <%= f.text_field :email, class: "form-control", placeholder: "Example: james.smith@gmail.com", maxlength: 128 %>
-        <br>
-        <%= f.text_field :password, class: "form-control", placeholder: "Password", maxlength: 128 %>
-      </div>
-      <div class ="form-group">
-        <%= f.submit :DONE, class: "btn btn-primary"%>
-      </div>
-    </div>
-  <% end %>
-<div>
+    <% end %>
+  </div>
+</div>

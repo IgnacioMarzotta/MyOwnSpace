@@ -18,7 +18,7 @@
       <%= link_to 'Create your first note!', new_note_path %>
     </div>
   <% else %>
-    <div class="card-columns m-3">
+    <div class="card-columns m-3" style="height:100vh;">
       <% @nonrecycled_notes.each do |note|%>
         <div class="card rounded-bottom m-3 <%= note.bodycolor.value%>">
           <div class="card-header"><h5 class="card-title"><b><%= note.title%></b></h5></div>
