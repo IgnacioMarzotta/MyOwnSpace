@@ -4,7 +4,7 @@ class InfosController < ApplicationController
   # GET /infos
   # GET /infos.json
   def index
-    @infos = Info.all
+    @infos = Info.where(user: current_user)
   end
 
   # GET /infos/1

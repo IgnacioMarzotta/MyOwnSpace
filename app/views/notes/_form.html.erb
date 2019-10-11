@@ -12,15 +12,15 @@
       <div class="form-group">
         <div class="form-row">
           <div class="col-md-10 mb-3">
-            <%= f.text_field :title, class: "form-control", placeholder: "Title"%>
+            <%= f.text_field :title, class: "form-control", placeholder: "Title", maxlength: 32 %>
           </div>
           <div class="col-md-2 mb-3">
-            <%=f.select :bodycolor_id, Bodycolor.all.collect{|x| [x.name, x.id]}, {}, class: "form-control", id: :note_bodycolor_id, prompt: "Select a colour", class: "form-control"%>
+            <%=f.select :bodycolor_id, Bodycolor.all.collect{|x| [x.name, x.id]}, {}, class: "form-control", id: :note_bodycolor_id, prompt: "Select a colour"%>
         </div>
       </div>
       <div class="form-group">
         <br>
-        <%= f.text_field :description, class: "form-control", placeholder: "Description"%>
+        <%= f.text_field :description, class: "form-control", placeholder: "Description", maxlength: 64 %>
         <br>
         <hr>
         <%= f.rich_text_area :content, placeholder: "Content"%>
