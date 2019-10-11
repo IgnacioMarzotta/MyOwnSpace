@@ -26,7 +26,9 @@ class NotesController < ApplicationController
   def create
     @note = Note.new(note_params)
     @note.user = current_user
-
+    if(@note.title == "")
+      @note.title = "Note"
+    end
     respond_to do |format|
       if @note.save
         format.html { redirect_to @note, notice: 'Note was successfully created.' }
