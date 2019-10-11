@@ -1,12 +1,22 @@
-<div class="form-margin">
-  <div class="card <%= @note.bodycolor.value%>">
-    <div class="card-header">
-      <h1 class="display-4"><%= @note.title%></h1>
-    </div>
-    <div class="card-body">
-      <h5 class="card-text"><%= @note.description%></h5>
-      <hr class="my-4">
-      <p class="card-text"><%= @note.content %></p>
+<style>
+  body
+  {
+    background: rgb(21,0,60);
+    background: linear-gradient(203deg, rgba(21,0,60,1) 0%, rgba(22,49,101,0.7147233893557423) 39%, rgba(110,48,0,1) 100%);
+  }
+</style>
+<div class="container">
+  <div class="form-margin">
+    <div class="card <%= @note.bodycolor.value%>">
+      <div class="card-header">
+        <%= link_to 'EDIT >>', edit_note_path, class: "btn btn-outline-primary float-right" %>
+        <h1 class="display-4"><%= @note.title%></h1>
+      </div>
+      <div class="card-body">
+        <h5 class="card-text"><%= @note.description%></h5>
+        <hr class="my-4">
+        <p class="card-text"><%= @note.content %></p>
+      </div>
     </div>
   </div>
 </div>
