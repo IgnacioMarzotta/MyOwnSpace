@@ -6,7 +6,18 @@
   </ul>
   <ul class="navbar-nav mx-auto">
     <li class="nav-item">
-      <a href='<%= root_path %>' class="nav-link"><%= image_tag 'home.png', width: 18, height: 18 %></a>
+      <% if(current_page?(notes_path))%>
+        <form class="form-inline">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1"><a href='<%= root_path %>'><%= image_tag 'home.png', width: 18, height: 18 %></a></span>
+            </div>
+            <input type="text" class="form-control" placeholder="Note" aria-label="Username" aria-describedby="basic-addon1">
+          </div>
+        </form>
+      <% elsif (current_page?(new_note_path))%>
+        <%= link_to 'Back to your notes', notes_path, class: 'btn btn-outline-warning' %>
+      <% end %>
     </li>
   </ul>
   <ul class="navbar-nav dropdown mx-auto">
@@ -14,6 +25,8 @@
       <a class="nav-link btn btn-sm btn-outline-secondary dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Account </a>
       <div class="dropdown-menu border-dropdown">
         <% if user_signed_in? %>
+          <p class="dropdown-item">Welcome, <%= current_user.username %>!</p>
+          <hr class="dropdown-separator">
           <%= link_to 'My Profile', root_path, class: 'dropdown-item' %>
           <%= link_to 'Friends', root_path, class: 'dropdown-item' %>
           <%= link_to 'Configuraion', root_path, class: 'dropdown-item' %>
