@@ -6,20 +6,38 @@
   </ul>
   <ul class="navbar-nav mx-auto">
     <li class="nav-item">
+      <!-- User in notes/index -->
       <% if(current_page?(notes_path))%>
         <form class="form-inline">
           <div class="input-group">
             <div class="input-group-prepend">
               <span class="input-group-text" id="basic-addon1"><%=link_to image_tag("home.png", width: 18, height: 18), root_path %></a></span>
             </div>
-            <input type="text" class="form-control" placeholder="Note" aria-label="Username" aria-describedby="basic-addon1">
+            <input type="text" class="form-control" placeholder="Search a note" aria-label="Username" aria-describedby="basic-addon1">
             <div class="input-group-prepend">
               <span class="input-group-text rounded-right" id="basic-addon2"><%=link_to image_tag("plus.png", width: 22, height: 22), new_note_path %></span>
             </div>
           </div>
         </form>
+      <!-- User in notes/new -->
       <% elsif (current_page?(new_note_path))%>
         <%= link_to 'Back to your notes', notes_path, class: 'btn btn-outline-warning' %>
+      <!-- User in infos/new -->
+      <% elsif (current_page?(new_info_path))%>
+        <%= link_to 'Back to your passwords', infos_path, class: 'btn btn-outline-warning' %>
+      <!-- User in infos/index -->
+      <% elsif (current_page?(infos_path))%>
+        <form class="form-inline">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1"><%=link_to image_tag("home.png", width: 18, height: 18), root_path %></a></span>
+            </div>
+            <input type="text" class="form-control" placeholder="Search a service" aria-label="Username" aria-describedby="basic-addon1">
+            <div class="input-group-prepend">
+              <span class="input-group-text rounded-right" id="basic-addon2"><%=link_to image_tag("plus.png", width: 22, height: 22), new_info_path %></span>
+            </div>
+          </div>
+        </form>
       <% end %>
     </li>
   </ul>
