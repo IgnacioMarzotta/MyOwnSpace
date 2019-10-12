@@ -1,3 +1,14 @@
 // Place all the styles related to the notes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body
+{
+  background: rgb(133,209,30);
+  background: linear-gradient(203deg, rgba(133,209,30,1) 0%, rgba(41,144,98,0.7147233893557423) 39%, rgba(201,150,19,1) 100%);
+}
+
+.container
+{
+  background-color: #F5F5F5;
+}

@@ -1,21 +1,18 @@
-<style>
-  body
-  {
-    background: rgb(21,0,60);
-    background: linear-gradient(203deg, rgba(21,0,60,1) 0%, rgba(22,49,101,0.7147233893557423) 39%, rgba(110,48,0,1) 100%);
-  }
-</style>
-<div class="container-fluid" style="height:100vh;">
+<br>
   <div class="form-margin">
     <%= form_with(model: @note, local: true) do |f| %>
       <div class="jumbotron jumbotron-fluid border border-light <%= note.bodycolor.value %>">
         <div class="form-group">
-          <div class="form-row">
-            <div class="col-md-10 mb-3">
+          <div class="row">
+            <div class="col-md-7 mb-3">
               <%= f.text_field :title, class: "form-control", placeholder: "Title", maxlength: 64%>
             </div>
-            <div class="col-md-2 mb-3">
+            <div class="col-md-3 mb-3">
               <%=f.select :bodycolor_id, Bodycolor.all.collect{|x| [x.name, x.id]}, {}, class: "form-control", id: :note_bodycolor_id, prompt: "Select a colour" %>
+            </div>
+            <div class="col-md-2 mb-3">
+              <%= f.submit :Save, class: "btn btn-block btn-primary"%>
+            </div>
           </div>
         </div>
         <div class="form-group">
@@ -25,9 +22,7 @@
           <hr>
           <%= f.rich_text_area :content, maxlength: 10, placeholder: "Content" %>
         </div>
-        <div class ="form-group">
-          <%= f.submit :DONE, class: "btn btn-primary"%>
-        </div>
+        <%= f.submit :DONE, class: "btn btn-primary btn-lg btn-block"%>
       </div>
     <% end %>
   </div>
