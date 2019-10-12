@@ -46,7 +46,7 @@
     <li class="nav-item">
       <a class="nav-link btn btn-sm btn-outline-secondary dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Account </a>
       <div class="dropdown-menu border-dropdown">
-          <p class="dropdown-item">Welcome, <%= current_user.username %>!</p>
+          <p class="dropdown-item">Hi, <%= truncate(current_user.username, length: 15) %> !</p>
           <hr class="dropdown-separator">
           <%= link_to 'My Profile', user_path(current_user), class: 'dropdown-item' %>
           <%= link_to 'Friends', root_path, class: 'dropdown-item' %>
@@ -58,8 +58,8 @@
   </ul>
   <% else %>
   <ul class="navbar-nav mx-auto">
-    <%= link_to 'Log-in', new_user_session_path, class: 'nav-item btn btn-sm btn-outline-secondary' %>
-    <%= link_to 'Register', new_user_registration_path, class: 'nav-item btn btn-sm btn-outline-secondary' %>
+    <%= link_to 'Log-in', new_user_session_path, class: 'nav-item btn btn-sm btn-outline-secondary ml-3' %>
+    <%= link_to 'Register', new_user_registration_path, class: 'nav-item btn btn-sm btn-outline-secondary ml-3' %>
   </ul>
   <% end %>
 </nav>
