@@ -1,26 +1,13 @@
-<div class="container border border-secondary">
-  <% if (@nonrecycled_notes.count == 0) %>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+<% if (@nonrecycled_notes.count == 0) %>
+  <div class="container border border-secondary" style="height:100vh;">
     <div class="mb-3">
       <h1 style="text-align: center;">It seems that you don't have any notes!</h1>
       <br>
-      <br>
-      <br>
-      <br>
       <%= link_to 'Create your first note!', new_note_path, class: 'btn btn-lg btn-success mx-auto' %>
     </div>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-  <% else %>
+  </div>
+<% else %>
+  <div class="container border border-secondary">
     <div class="card-columns m-3">
       <% @nonrecycled_notes.each do |note|%>
         <div class="card rounded-bottom m-3 <%= note.bodycolor.value%>">
@@ -47,11 +34,5 @@
         </div>
       <% end %>
     </div>
-    <br>
-    <br>
-    <br>
-    <br>
-  <% end %>
-  <br>
-  <br>
-</div>
+  </div>
+<% end %>
