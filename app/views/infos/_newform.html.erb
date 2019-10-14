@@ -8,7 +8,7 @@
             <h1><b>Store a new password</b></h1>
           </div>
           <div class="col-md-6">
-            <%= f.select :bodycolor_id, Bodycolor.all.collect{|x| [x.name, x.id]}, {}, class: "form-control w-25 float-right", id: :note_bodycolor_id, prompt: "Select a colour"%>
+            <%= f.select :bodycolor_id, Bodycolor.all.collect{|x| [raw(x.name), x.id]}, {}, class: "form-control w-25 float-right", id: :note_bodycolor_id, prompt: "Select a colour"%>
           </div>
         </div>
       </div>

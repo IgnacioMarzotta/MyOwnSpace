@@ -2,7 +2,8 @@
   <div class="container border border-secondary" style="height:100vh;">
     <div class="mb-3">
       <h1>It seems that you don't have any passwords stored!</h1>
-      <%= link_to 'Create your first password!', new_info_path %>
+      <br>
+      <%= link_to 'Create your first password!', new_info_path, class: 'btn btn-lg btn-success' %>
     </div>
   </div>
 <% else %>

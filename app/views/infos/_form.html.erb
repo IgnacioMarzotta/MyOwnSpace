@@ -16,7 +16,7 @@
               <%= f.text_field :servicename, class: "form-control", placeholder: "Example: Facebook"%>
             </div>
             <div class="col-md-2 mb-3">
-              <%= f.select :bodycolor_id, Bodycolor.all.collect{|x| [x.name, x.id]}, {}, class: "form-control", id: :note_bodycolor_id, prompt: "Select a colour"%>
+              <%= f.select :bodycolor_id, Bodycolor.all.collect{|x| [raw(x.name), x.id]}, {}, class: "form-control", id: :note_bodycolor_id, prompt: "Select a colour"%>
           </div>
         </div>
         <div class="form-group">
