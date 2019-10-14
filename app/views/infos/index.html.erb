@@ -1,10 +1,12 @@
-<div class="container border border-secondary">
-  <% if (@infos.count == 0) %>
+<% if (@infos.count == 0) %>
+  <div class="container border border-secondary" style="height:100vh;">
     <div class="mb-3">
       <h1>It seems that you don't have any passwords stored!</h1>
       <%= link_to 'Create your first password!', new_info_path %>
     </div>
-  <% else %>
+  </div>
+<% else %>
+  <div class="container border border-secondary">
     <div class="card-columns m-3">
       <% @infos.each do |info|%>
         <div class="card rounded-bottom m-3 <%= info.bodycolor.value%>">
@@ -23,5 +25,5 @@
         </div>
       <% end %>
     </div>
-  <% end %>
-</div>
+  </div>
+<% end %>
