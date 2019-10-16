@@ -19,6 +19,9 @@
             </div>
           </div>
         </form>
+      <!-- User in a specific note -->
+      <% elsif (current_page?(@note))%>
+        <%= link_to 'Back to your notes', notes_path, class: 'btn btn-outline-warning' %>
       <!-- User in notes/new -->
       <% elsif (current_page?(new_note_path))%>
         <%= link_to 'Back to your notes', notes_path, class: 'btn btn-outline-warning' %>
