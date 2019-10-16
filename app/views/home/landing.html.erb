@@ -1,9 +1,11 @@
+<%= stylesheet_link_tag 'landing.css' %>
 <header class="masthead text-center text-white">
   <div class="masthead-content">
     <div class="container">
-      <h1 class="masthead-heading mb-0">One Page Wonder</h1>
-      <h2 class="masthead-subheading mb-0">Will Rock Your Socks Off</h2>
-      <a href="#" class="btn btn-primary btn-xl rounded-pill mt-5">Learn More</a>
+      <br>
+      <h1 class="masthead-heading mb-0 text-dark">MyOwnSpace</h1>
+      <h2 class="masthead-subheading mb-0 text-dark">A space for yourself</h2>
+      <%= link_to 'Get started!', notes_path, class: 'btn btn-primary btn-xl rounded-pill mt-5 mb-5' %>
     </div>
   </div>
   <div class="bg-circle-1 bg-circle"></div>
@@ -21,8 +23,8 @@
       </div>
       <div class="col-lg-6 order-lg-1">
         <div class="p-5">
-          <h2 class="display-4">For those about to rock...</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aliquid, mollitia odio veniam sit iste esse assumenda amet aperiam exercitationem, ea animi blanditiis recusandae! Ratione voluptatum molestiae adipisci, beatae obcaecati.</p>
+          <h2 class="display-4">For the productive ones</h2>
+          <p>No more having separate applications for passwords, notes and calendar. Managing all that can be really time consuming. MyOwnSpace has it all, and does it all for you. Store your passwords with military-grade encryption, store your notes and share them with someone else, add events and details to your calendar.</p>
         </div>
       </div>
     </div>
@@ -39,8 +41,8 @@
       </div>
       <div class="col-lg-6">
         <div class="p-5">
-          <h2 class="display-4">We salute you!</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aliquid, mollitia odio veniam sit iste esse assumenda amet aperiam exercitationem, ea animi blanditiis recusandae! Ratione voluptatum molestiae adipisci, beatae obcaecati.</p>
+          <h2 class="display-4">For the organized ones</h2>
+          <p>Your notes and passwords can be sorted by color, update or creation date, or randomly. Want to share your notes with someone else? No problem!, with just a few clicks, they can see what you shared with them!</p>
         </div>
       </div>
     </div>
@@ -57,7 +59,7 @@
       </div>
       <div class="col-lg-6 order-lg-1">
         <div class="p-5">
-          <h2 class="display-4">Let there be rock!</h2>
+          <h2 class="display-4">And the unorganized ones!</h2>
           <span class="badge badge-yellow">..</span> Yellow <br>
           <span class="badge badge-black">..</span> Black <br>
           <span class="badge badge-grey">..</span> Grey <br>
@@ -73,8 +75,6 @@
     </div>
   </div>
 </section>
-<br>
-<br>
 <!-- 
 <h1>Este será el landing</h1>
 <%= image_tag 'logo.png' %>

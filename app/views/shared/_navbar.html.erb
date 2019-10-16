@@ -1,4 +1,10 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom-navbar">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom-navbar 
+<% if(current_page? root_path) %>
+  <%= "fixed-top"%>
+<% else %>
+  <%= " " %>
+<% end %>
+">
   <ul class="navbar-nav mx-auto">
     <li class="nav-item">
       <%= link_to  "MyOwnSpace", root_path, class: 'navbar-brand disabled brand-color' %>
@@ -19,9 +25,6 @@
             </div>
           </div>
         </form>
-      <!-- User in a specific note -->
-      <% elsif (current_page?(@note))%>
-        <%= link_to 'Back to your notes', notes_path, class: 'btn btn-outline-warning' %>
       <!-- User in notes/new -->
       <% elsif (current_page?(new_note_path))%>
         <%= link_to 'Back to your notes', notes_path, class: 'btn btn-outline-warning' %>
@@ -61,8 +64,8 @@
   </ul>
   <% else %>
   <ul class="navbar-nav mx-auto">
-    <%= link_to 'Log-in', new_user_session_path, class: 'nav-item btn btn-sm btn-outline-secondary ml-3' %>
-    <%= link_to 'Register', new_user_registration_path, class: 'nav-item btn btn-sm btn-outline-secondary ml-3' %>
+    <%= link_to 'Log-in', new_user_session_path, class: 'nav-item btn btn-pink ml-3 text-white' %>
+    <%= link_to 'Register', new_user_registration_path, class: 'nav-item btn btn-orange ml-3 text-white' %>
   </ul>
   <% end %>
 </nav>

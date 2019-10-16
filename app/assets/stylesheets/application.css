@@ -30,12 +30,6 @@
     }
 }
 
-body
-{
-  background: rgb(133,209,30);
-  background: linear-gradient(203deg, rgba(133,209,30,1) 0%, rgba(41,144,98,0.7147233893557423) 39%, rgba(201,150,19,1) 100%);
-}
-
 .container
 {
   background-color: #F5F5F5;
@@ -297,23 +291,11 @@ table
     background-image: linear-gradient(to right, #BABFBA, #7C807C, #3E403E);
 }
 
-/*************************/
-/* INDIVIDUAL PAGE STYLE */
-/*************************/
-
-.landing-style
-{
-    background-color: #7C807C;
-}
-
-.notes-index-style
-{
-    background-image: url('Background2.png');
-}
 
 /****************/
 /* FOOTER STYLE */
 /****************/
+
 
 .bg-footer
 {
