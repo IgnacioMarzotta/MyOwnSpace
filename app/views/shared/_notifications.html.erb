@@ -1,13 +1,12 @@
 <% if(notice) %>
-    <br>
-    <p class="alert alert-primary alert-dismissible fade show ml-5 mr-5" role="alert"><%= notice %>
+    <p class="alert alert-primary alert-dismissible fade show ml-5 mr-5" role="alert" style="z-index: 1;"><%= notice %>
     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
         <span aria-hidden="true">&times;</span>
     </button></p>
 <% end %>
 
 <% if(alert) %>
-    <p class="alert alert-danger alert-dismissible fade show ml-5 mr-5" role="alert"><%= alert %>
+    <p class="alert alert-danger alert-dismissible fade show ml-5 mr-5" role="alert" style="z-index: 1;><%= alert %>
     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
         <span aria-hidden="true">&times;</span>
     </button></p>

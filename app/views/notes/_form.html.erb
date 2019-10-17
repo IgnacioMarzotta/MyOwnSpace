@@ -11,7 +11,7 @@
               <%=f.select :bodycolor_id, Bodycolor.all.collect{|x| [x.name, x.id]}, {}, class: "form-control", id: :note_bodycolor_id, prompt: "Select a colour" %>
             </div>
             <div class="col-md-2 mb-3">
-              <%= f.submit :Save, class: "btn btn-block btn-primary"%>
+              <%= f.submit :Save, class: "btn btn-block btn-outline-success"%>
             </div>
           </div>
         </div>
@@ -22,7 +22,6 @@
           <hr>
           <%= f.rich_text_area :content, maxlength: 10, placeholder: "Content" %>
         </div>
-        <%= f.submit :DONE, class: "btn btn-primary btn-lg btn-block"%>
       </div>
     <% end %>
   </div>

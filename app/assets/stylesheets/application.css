@@ -10,12 +10,16 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
  *= require_self
  */
 
 /*******************************************************************************/
 /* ATTRIBUTES */
+
+.container
+{
+  background-color: #F5F5F5;
+}
 
 .card-columns 
 {
@@ -28,11 +32,6 @@
     {
       column-count: 5;
     }
-}
-
-.container
-{
-  background-color: #F5F5F5;
 }
 
 table
@@ -69,6 +68,7 @@ table
 
 .notice
 {
+    z-index: 1;
     color: #ffffff;
     background-color: #343A40;
     text-align: center;

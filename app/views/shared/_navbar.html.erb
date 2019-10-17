@@ -1,5 +1,6 @@
+<%= stylesheet_link_tag 'landing.css' %>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom-navbar 
-<% if(current_page? root_path) %>
+<% if(current_page? root_path) && (user_signed_in? == false) %>
   <%= "fixed-top"%>
 <% else %>
   <%= " " %>
