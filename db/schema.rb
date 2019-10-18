@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_11_182300) do
+ActiveRecord::Schema.define(version: 2019_10_18_133422) do
 
   create_table "action_text_rich_texts", force: :cascade do |t|
     t.string "name", null: false
@@ -53,14 +53,22 @@ ActiveRecord::Schema.define(version: 2019_10_11_182300) do
   create_table "infos", force: :cascade do |t|
     t.integer "bodycolor_id", null: false
     t.string "servicename"
-    t.string "nickname"
-    t.string "email"
-    t.string "password"
-    t.string "content"
+    t.string "encrypted_nickname"
+    t.string "encrypted_email"
+    t.string "encrypted_password"
+    t.string "encrypted_content"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "user_id", null: false
+    t.string "encrypted_nickname_iv"
+    t.string "encrypted_email_iv"
+    t.string "encrypted_password_iv"
+    t.string "encrypted_content_iv"
     t.index ["bodycolor_id"], name: "index_infos_on_bodycolor_id"
+    t.index ["encrypted_content_iv"], name: "index_infos_on_encrypted_content_iv", unique: true
+    t.index ["encrypted_email_iv"], name: "index_infos_on_encrypted_email_iv", unique: true
+    t.index ["encrypted_nickname_iv"], name: "index_infos_on_encrypted_nickname_iv", unique: true
+    t.index ["encrypted_password_iv"], name: "index_infos_on_encrypted_password_iv", unique: true
     t.index ["user_id"], name: "index_infos_on_user_id"
   end
 

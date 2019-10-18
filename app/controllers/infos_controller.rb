@@ -26,7 +26,6 @@ class InfosController < ApplicationController
   def create
     @info = Info.new(info_params)
     @info.user = current_user
-    byebug
 
     respond_to do |format|
       if @info.save

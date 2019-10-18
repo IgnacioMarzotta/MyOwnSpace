@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 Note.destroy_all
+Info.destroy_all
 Bodycolor.destroy_all
 User.destroy_all
 
@@ -22,6 +23,6 @@ Bodycolor.create(name: '<span class="badge badge-purple">..</span>Purple', value
 10.times do
     a = User.create(username: Faker::Internet.username, email: Faker::Internet.email, password: 123456, password_confirmation: 123456)
     9.times do |i|
-        Note.create(user_id: a.id, bodycolor_id: Bodycolor.all.sample.id, title: "Note n°#{i}", description: "Note n°#{i}'s description", content: Faker::Lorem.paragraph(2))
+        Note.create(user_id: a.id, bodycolor_id: Bodycolor.all.sample.id, title: "Note n°#{i}", description: "Note n°#{i}'s description", content: Faker::Lorem.paragraph(sentence_count: 2))
     end
 end
