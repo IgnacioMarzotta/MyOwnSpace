@@ -1,34 +1,18 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Bodycolor:</strong>
-  <%= @info.bodycolor_id %>
-</p>
-
-<p>
-  <strong>Servicename:</strong>
-  <%= @info.servicename %>
-</p>
-
-<p>
-  <strong>Nickname:</strong>
-  <%= @info.nickname %>
-</p>
-
-<p>
-  <strong>Email:</strong>
-  <%= @info.email %>
-</p>
-
-<p>
-  <strong>Password:</strong>
-  <%= @info.password %>
-</p>
-
-<p>
-  <strong>Content:</strong>
-  <%= @info.content %>
-</p>
-
-<%= link_to 'Edit', edit_info_path(@info) %> |
-<%= link_to 'Back', infos_path %>
+<div class="container-fluid">
+  <div class="form-margin">
+    <div class="card <%= @info.bodycolor.value%>">
+      <div class="card-header">
+        <%= link_to 'EDIT PASSWORD', edit_info_path, class: "btn btn-xl btn-outline-warning float-right" %>
+        <h1 class="display-4"><%= @info.servicename %></h1>
+      </div>
+      <div class="card-body">
+        <p class="card-text"><%= @info.nickname %></p>
+        <p class="card-text"><%= @info.password %></p>
+        <p class="card-text"><%= @info.email %></p>
+        <p class="card-text"><%= @info.content %></p>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+<br>

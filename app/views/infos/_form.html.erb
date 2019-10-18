@@ -21,11 +21,13 @@
         </div>
         <div class="form-group">
           <br>
-          <%= f.text_field :username, class: "form-control", placeholder: "Example: james.smith", maxlength: 128 %>
+          <%= f.text_field :nickname, class: "form-control", placeholder: "Example: james.smith", maxlength: 128 %>
           <br>
           <%= f.text_field :email, class: "form-control", placeholder: "Example: james.smith@gmail.com", maxlength: 128 %>
           <br>
           <%= f.text_field :password, class: "form-control", placeholder: "Password", maxlength: 128 %>
+          <br>
+          <%= f.text_area :content, class: "form-control", placeholder: "Extra notes, such as recovery codes, etc...", maxlength: 500 %>
         </div>
         <div class ="form-group">
           <%= f.submit :DONE, class: "btn btn-primary"%>

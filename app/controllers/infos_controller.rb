@@ -25,13 +25,15 @@ class InfosController < ApplicationController
   # POST /infos.json
   def create
     @info = Info.new(info_params)
+    @info.user = current_user
+    byebug
 
     respond_to do |format|
       if @info.save
-        format.html { redirect_to @info, notice: 'Info was successfully created.' }
+        format.html { redirect_to infos_url, notice: 'Info was successfully created.' }
         format.json { render :show, status: :created, location: @info }
       else
-        format.html { render :new }
+        format.html { render :new, notice: 'Info was not saved' }
         format.json { render json: @info.errors, status: :unprocessable_entity }
       end
     end
