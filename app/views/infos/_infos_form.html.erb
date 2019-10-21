@@ -1,7 +1,12 @@
 <br>
 <div class="form-margin">
   <%= form_with(model: @info, local: true) do |f| %>
-    <div class="jumbotron jumbotron-fluid border border-light bg-card-black border-top-black text-black">
+    <div class="jumbotron jumbotron-fluid border border-light
+      <% if(current_page?(new_info_path))%>
+        bg-card-black border-top-black text-white
+      <% else %>
+        <%= info.bodycolor.value %>
+      <% end %>">
       <div class="form-group">
         <div class="form-row">
           <div class="col-md-6">

@@ -1,7 +1,12 @@
 <br>
   <div class="form-margin">
     <%= form_with(model: @note, local: true) do |f| %>
-      <div class="jumbotron jumbotron-fluid border border-light <%= note.bodycolor.value %>">
+      <div class="jumbotron jumbotron-fluid border border-light
+      <% if(current_page?(new_note_path))%>
+        bg-card-yellow border-top-yellow text-dark
+      <% else %>
+        <%= note.bodycolor.value %>
+      <% end %>">
         <div class="form-group">
           <div class="row">
             <div class="col-md-7 mb-3">
@@ -20,7 +25,7 @@
           <%= f.text_field :description, class: "form-control", placeholder: "Description", maxlength: 128%>
           <br>
           <hr>
-          <%= f.rich_text_area :content, maxlength: 10, placeholder: "Content" %>
+          <%= f.rich_text_area :content, placeholder: "Content" %>
         </div>
       </div>
     <% end %>

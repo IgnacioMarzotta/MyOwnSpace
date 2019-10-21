@@ -48,25 +48,6 @@
       <% end %>
     </li>
   </ul>
-  <% if user_signed_in? %>
-  <ul class="navbar-nav dropdown mx-auto">
-    <li class="nav-item">
-      <a class="nav-link btn btn-sm btn-outline-secondary dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Account </a>
-      <div class="dropdown-menu border-dropdown">
-          <p class="dropdown-item">Hi, <%= truncate(current_user.username, length: 15) %> !</p>
-          <hr class="dropdown-separator">
-          <%= link_to 'My Profile', user_path(current_user), class: 'dropdown-item' %>
-          <%= link_to 'Friends', root_path, class: 'dropdown-item' %>
-          <%= link_to 'Configuraion', root_path, class: 'dropdown-item' %>
-          <hr class="dropdown-separator">
-          <%= link_to 'Log-out', destroy_user_session_path, method: :delete, class: 'dropdown-item' %>
-      </div>
-    </li>
-  </ul>
-  <% else %>
-  <div class="navbar-nav mx-auto">
-    <%= link_to 'Log-in', new_user_session_path, class: 'nav-item btn btn-pink ml-3 text-white' %>
-    <%= link_to 'Register', new_user_registration_path, class: 'nav-item btn btn-orange ml-3 text-white' %>
-  </div>
-  <% end %>
+  <!-- Sidebar -->
+  <button onclick="openNav()" class="btn btn-outline-secondary mx-auto">My Account</button>
 </nav>
