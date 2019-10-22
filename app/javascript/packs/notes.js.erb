@@ -1,0 +1,27 @@
+$(document).on('ready turbolinks:load', function(){
+    $("input[name='q']").keyup(function(){
+        var q = $(this).val() 
+        // Filter
+        if(q.length > 1)
+        {
+            $.ajax(
+            {
+                type: "get",
+                url: "/posts",
+                data: { q: q },
+                dataType: "script"
+            });
+        };
+
+        // Clean
+        if(q.length == 0)
+        {
+            $.ajax(
+            {
+                type: "get",
+                url: "/posts",
+                dataType: "script"
+            });
+        };
+    });
+});

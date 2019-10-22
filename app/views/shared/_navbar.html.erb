@@ -4,8 +4,7 @@
   <%= "fixed-top"%>
 <% else %>
   <%= " " %>
-<% end %>
-">
+<% end %>">
   <ul class="navbar-nav mx-auto">
     <li class="nav-item">
       <%= link_to  "MyOwnSpace", root_path, class: 'navbar-brand disabled brand-color' %>
@@ -20,7 +19,7 @@
             <div class="input-group-prepend">
               <span class="input-group-text" id="basic-addon1"><%=link_to image_tag("home.png", width: 18, height: 18), root_path %></a></span>
             </div>
-            <input type="text" class="form-control" placeholder="Search by note title" aria-label="Username" aria-describedby="basic-addon1">
+            <%= text_field_tag :q, '', class: 'form-control', placeholder:'Search a note by title' %>
             <div class="input-group-prepend">
               <span class="input-group-text rounded-right" id="basic-addon2"><%=link_to image_tag("plus.png", width: 22, height: 22), new_note_path %></span>
             </div>
@@ -37,11 +36,11 @@
         <form class="form-inline">
           <div class="input-group">
             <div class="input-group-prepend">
-              <span class="input-group-text" id="basic-addon1"><%=link_to image_tag("home.png", width: 18, height: 18), root_path %></a></span>
+              <span class="input-group-text" id="basic-addon1"><%=link_to image_tag("home.png", width: 16, height: 16), root_path %></a></span>
             </div>
             <input type="text" class="form-control" placeholder="Search by service" aria-label="Username" aria-describedby="basic-addon1">
             <div class="input-group-prepend">
-              <span class="input-group-text rounded-right" id="basic-addon2"><%=link_to image_tag("plus.png", width: 22, height: 22), new_info_path %></span>
+              <span class="input-group-text rounded-right" id="basic-addon2"><%=link_to image_tag("plus.png", width: 18, height: 18), new_info_path %></span>
             </div>
           </div>
         </form>

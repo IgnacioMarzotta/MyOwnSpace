@@ -2,6 +2,7 @@
   <div class="container border border-secondary" style="height:100vh;">
     <div class="mb-3">
       <h1 style="text-align: center;">It seems that you don't have any notes!</h1>
+      <h4 style="text-align: center;">If you had any notes, check the search bar (in case you have any active filters) or the recycling bin</h4>
       <br>
       <%=link_to image_tag("recycle.png", width: 28, height: 28), root_path, class: 'btn btn-lg btn-outline-success float-right' %>
       <%= link_to 'Create your first note!', new_note_path, class: 'btn btn-lg btn-success mx-auto' %>
@@ -10,7 +11,7 @@
 <% else %>
   <div class="container border border-secondary" style="
     <% if(@nonrecycled_notes.count <= 3) %>
-      <%= "height:100vh;" %>
+      <%= "height:100%;" %>
     <% else %>
       <%= " " %>
     <% end %>">
@@ -19,30 +20,7 @@
     <h1 style="text-align: center;">Your notes</h1>
     <hr>
     <div class="card-columns m-3">
-      <% @nonrecycled_notes.each do |note|%>
-        <div class="card rounded-bottom m-3 <%= note.bodycolor.value%>">
-          <div class="card-header"><h5 class="card-title"><b>
-          <% if(note.title == "")%>
-            Note
-          <% else %>
-            <%= note.title%>
-          <% end %>
-          </b></h5></div>
-          <div class="card-body">
-            <p class="card-text">
-            <% if(note.description == "") %>
-              You added no description!<br><br>
-            <% else %>
-              <%= note.description %></p>
-            <% end %>
-            <%=link_to image_tag("edit.png", width: 28, height: 28), edit_note_path(note), class: 'card-link' %>
-            <%=link_to image_tag("view.png", width: 28, height: 28), note, class: 'card-link' %>
-          </div>
-          <div class="card-footer">
-            <small class="text-dark"> Last update: <%= note.updated_at.localtime%></small>
-          </div>
-        </div>
-      <% end %>
+      <%= render @nonrecycled_notes %>
     </div>
   </div>
   <br>

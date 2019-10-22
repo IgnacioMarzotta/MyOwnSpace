@@ -1,0 +1,22 @@
+<div class="card rounded-bottom m-3 <%= note.bodycolor.value%>" id="note_<%= note.id %>">
+  <div class="card-header"><h5 class="card-title"><b>
+  <% if(note.title == "")%>
+    Note
+  <% else %>
+    <%= note.title%>
+  <% end %>
+  </b></h5></div>
+  <div class="card-body">
+    <p class="card-text">
+    <% if(note.description == "") %>
+      You added no description!<br><br>
+    <% else %>
+      <%= note.description %></p>
+    <% end %>
+    <%=link_to image_tag("edit.png", width: 28, height: 28), edit_note_path(note), class: 'card-link' %>
+    <%=link_to image_tag("view.png", width: 28, height: 28), note, class: 'card-link' %>
+  </div>
+  <div class="card-footer">
+    <small class="text-dark"> Last update: <%= note.updated_at.localtime%></small>
+  </div>
+</div>

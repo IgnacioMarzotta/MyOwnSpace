@@ -1,0 +1,5 @@
+<% note_growth = Note.group_by_month(:created_at).count %>
+<%= bar_chart note_growth %>
+<br><br><br>
+<% user_growth = User.group_by_month(:created_at).count %>
+<%= pie_chart user_growth %>
