@@ -1,25 +1,25 @@
 $(document).on('ready turbolinks:load', function(){
-    $("input[name='q']").keyup(function(){
-        var q = $(this).val() 
+    $("input[name='note_search']").keyup(function(){
+        var note_search = $(this).val() 
         // Filter
-        if(q.length > 1)
+        if(note_search.length > 1)
         {
             $.ajax(
             {
                 type: "get",
-                url: "/posts",
-                data: { q: q },
+                url: "/notes",
+                data: { note_search: note_search },
                 dataType: "script"
             });
         };
 
         // Clean
-        if(q.length == 0)
+        if(note_search.length == 0)
         {
             $.ajax(
             {
                 type: "get",
-                url: "/posts",
+                url: "/notes",
                 dataType: "script"
             });
         };

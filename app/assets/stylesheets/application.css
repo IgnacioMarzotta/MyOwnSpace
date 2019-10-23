@@ -36,6 +36,11 @@
     }
 }
 
+body
+{
+    z-index: 0;
+}
+
 table
 {
     margin-top: -2%;
@@ -68,7 +73,7 @@ table
     margin-right: 3%;
 }
 
-.notice
+.alert
 {
     z-index: 1;
     color: #ffffff;

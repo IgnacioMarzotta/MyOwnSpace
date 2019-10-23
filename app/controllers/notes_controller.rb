@@ -5,7 +5,7 @@ class NotesController < ApplicationController
   # GET /notes.json
   def index
     @nonrecycled_notes = Note.where(user: current_user, recycled: false)
-    @nonrecycled_notes = @nonrecycled_notes.where("title like ?", "%#{params[:q]}%") if params[:q]
+    @nonrecycled_notes = @nonrecycled_notes.where("title like ?", "%#{params[:note_search]}%") if params[:note_search]
   end
 
   # GET /notes/1
@@ -34,7 +34,7 @@ class NotesController < ApplicationController
       if @note.save
         format.html { redirect_to @note, notice: 'Note was successfully created.' }
         format.json { render :show, status: :created, location: @note }
-        format.js { }
+        format.js 
       else
         format.html { render :new }
         format.json { render json: @note.errors, status: :unprocessable_entity }
@@ -63,7 +63,7 @@ class NotesController < ApplicationController
     respond_to do |format|
       format.html { redirect_to notes_url, notice: 'Note was successfully destroyed.' }
       format.json { head :no_content }
-      format.js { }
+      format.js
     end
   end
 

@@ -5,6 +5,7 @@ class InfosController < ApplicationController
   # GET /infos.json
   def index
     @infos = Info.where(user: current_user)
+    @infos = @infos.where("servicename like ?", "%#{params[:info_search]}%") if params[:info_search]
   end
 
   # GET /infos/1
@@ -59,6 +60,7 @@ class InfosController < ApplicationController
     respond_to do |format|
       format.html { redirect_to infos_url, notice: 'Info was successfully destroyed.' }
       format.json { head :no_content }
+      format.js
     end
   end
 

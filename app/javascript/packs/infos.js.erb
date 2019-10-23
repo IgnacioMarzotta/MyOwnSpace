@@ -1,0 +1,26 @@
+$(document).on('ready turbolinks:load', function(){
+
+  $("input[name='info_search']").keyup(function(){
+  var info_search = $(this).val() 
+  
+  //Filter
+  if(info_search.length > 2){
+   $.ajax({
+      type: "get",
+      url: "/infos",
+      data: { info_search: info_search },
+      dataType: "script"
+    });
+   };
+
+  //Clean filter
+  if(info_search.length == 0){
+   $.ajax({
+      type: "get",
+      url: "/infos",
+      dataType: "script"
+    });
+   };
+
+  });
+});

@@ -17,18 +17,7 @@
     <h1 style="text-align: center;">Your passwords</h1>
     <hr>
     <div class="card-columns m-3">
-      <% @infos.each do |info|%>
-        <div class="card rounded-bottom m-3 <%= info.bodycolor.value%>">
-          <div class="card-header"><h5 class="card-title"><b><%= info.servicename%></b></h5></div>
-          <div class="card-body">
-            <p class="card-text">Username: <%= info.nickname %></p>
-            <%=link_to image_tag("view.png", width: 28, height: 28), info, class: 'card-link' %>
-          </div>
-          <div class="card-footer">
-            <small class="text-dark"> Last update: <%= info.updated_at.localtime%></small>
-          </div>
-        </div>
-      <% end %>
+      <%= render @infos %>
     </div>
   </div>
 <% end %>
