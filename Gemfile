@@ -21,10 +21,20 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+#All Omniauth gems
+gem 'omniauth-google-oauth2'
+gem 'omniauth-twitter'
+gem 'omniauth-facebook'
+
+#All gems related to ActiveAdmin
+gem 'activeadmin'
 gem 'groupdate'
 gem 'chartkick'
-gem 'activeadmin'
+
+#Gems related to notes
 gem 'actiontext'
+
+#Gems related to infos
 gem "attr_encrypted", "~> 3.1.0"
 
 # Use Active Storage variant

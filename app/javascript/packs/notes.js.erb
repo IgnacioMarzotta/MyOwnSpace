@@ -2,7 +2,7 @@ $(document).on('ready turbolinks:load', function(){
     $("input[name='note_search']").keyup(function(){
         var note_search = $(this).val() 
         // Filter
-        if(note_search.length > 1)
+        if(note_search.length > 0)
         {
             $.ajax(
             {

@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container-fluid" style="height: vh100;">
   <div class="form-margin">
     <div class="card <%= @info.bodycolor.value%>">
       <div class="card-header">
@@ -6,10 +6,11 @@
         <h1 class="display-4"><%= @info.servicename %></h1>
       </div>
       <div class="card-body">
-        <p class="card-text"><%= @info.nickname %></p>
-        <p class="card-text"><%= @info.password %></p>
-        <p class="card-text"><%= @info.email %></p>
-        <p class="card-text"><%= @info.content %></p>
+        <p class="card-text"><b>Nickname:   </b>  <%= @info.nickname %></p>
+        <p class="card-text"><b>Email:   </b>  <%= @info.email %></p>
+        <p class="card-text"><b>Password:   </b>  <%= @info.password %></p>
+        <hr>
+        <p class="card-text"><b>Extra notes:  </b></p><br><%= @info.content %>
       </div>
     </div>
   </div>

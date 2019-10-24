@@ -4,10 +4,11 @@
       <br>
       <h1 class="masthead-heading mb-0 text-dark">MyOwnSpace</h1>
       <h2 class="masthead-subheading mb-0 text-dark">A space for yourself</h2>
+      <h4 class="text-dark">A secure password, note and event storage app.</h4>
       <% if(user_signed_in?)%>
-        <%= link_to 'Go to your notes!', notes_path, class: 'btn btn-primary btn-xl rounded-pill mt-5 mb-5' %>
+        <%= link_to 'Go to your notes!', notes_path, class: 'btn btn-outline-primary btn-xl rounded-pill mt-5 mb-5' %>
       <% else %>       
-        <%= link_to 'Get started!', new_user_session_path, class: 'btn btn-primary btn-xl rounded-pill mt-5 mb-5' %>
+        <%= link_to 'Get started!', new_user_session_path, class: 'btn btn-outline-primary btn-xl rounded-pill mt-5 mb-5' %>
       <% end %>
     </div>
   </div>
@@ -16,12 +17,13 @@
   <div class="bg-circle-3 bg-circle"></div>
   <div class="bg-circle-4 bg-circle"></div>
 </header>
+
 <section>
   <div class="container">
     <div class="row align-items-center">
       <div class="col-lg-6 order-lg-2">
         <div class="p-5">
-          <img class="img-fluid rounded-circle" src="img/01.jpg" alt="">
+          <%= image_tag 'Landing-01.jpg', class: "img-fluid rounded-circle" %>
         </div>
       </div>
       <div class="col-lg-6 order-lg-1">
@@ -39,13 +41,13 @@
     <div class="row align-items-center">
       <div class="col-lg-6">
         <div class="p-5">
-          <img class="img-fluid rounded-circle" src="img/02.jpg" alt="">
+          <%= image_tag 'Landing-02.png', class: "img-fluid rounded-circle" %>
         </div>
       </div>
       <div class="col-lg-6">
         <div class="p-5">
           <h2 class="display-4">For the organized ones</h2>
-          <p>Your notes and passwords can be sorted by color, update or creation date, or randomly. Want to share your notes with someone else? No problem!, with just a few clicks, they can see what you shared with them!</p>
+          <p>Your notes and passwords can be sorted by color, update or creation date, or randomly. Want to share your notes with someone else? No problem!, with just a few clicks, they can see what you shared with them!.</p>
         </div>
       </div>
     </div>
@@ -57,22 +59,25 @@
     <div class="row align-items-center">
       <div class="col-lg-6 order-lg-2">
         <div class="p-5">
-          <img class="img-fluid rounded-circle" src="img/03.jpg" alt="">
+          <%= image_tag 'Landing-03.png', class: "img-fluid rounded-circle" %>
         </div>
       </div>
       <div class="col-lg-6 order-lg-1">
         <div class="p-5">
-          <h2 class="display-4">And the unorganized ones!</h2>
-          <span class="badge badge-yellow">..</span> Yellow <br>
-          <span class="badge badge-black">..</span> Black <br>
-          <span class="badge badge-grey">..</span> Grey <br>
-          <span class="badge badge-red">..</span> Red <br>
-          <span class="badge badge-green">..</span> Green <br>
-          <span class="badge badge-purple">..</span> Purple <br>
-          <span class="badge badge-orange">..</span> Orange <br>
-          <span class="badge badge-white">..</span> White <br>
-          <span class="badge badge-blue">..</span> Blue <br>
-          <i class="badge badge-blue">..</i> Blue
+          <h2 class="display-4">For the creative ones</h2>
+          <p>Colors for all types of moods or importances. Want another color in this line-up? No problem!, MyOwnSpace does monthly polls to add new colors sugested by users!. Want to see one of your own? Join us and participate!.</p>
+          <br>
+          <br>
+          <span class="badge badge-yellow">..</span> Yellow     
+          <span class="badge badge-black">..</span> Black     
+          <span class="badge badge-grey">..</span> Grey     
+          <span class="badge badge-red">..</span> Red     
+          <span class="badge badge-green">..</span> Green      
+          <span class="badge badge-purple">..</span> Purple     
+          <span class="badge badge-orange">..</span> Orange     
+          <span class="badge badge-white border border-black">..</span> White     
+          <span class="badge badge-blue">..</span> Blue     
+          <i class="badge badge-blue">..</i> Blue     
         </div>
       </div>
     </div>
@@ -84,13 +89,13 @@
     <div class="row align-items-center">
       <div class="col-lg-6">
         <div class="p-5">
-          <img class="img-fluid rounded-circle" src="img/02.jpg" alt="">
+          <%= image_tag 'Landing-04.png', class: "img-fluid rounded-circle" %>
         </div>
       </div>
       <div class="col-lg-6">
         <div class="p-5">
-          <h2 class="display-4">For the organized ones</h2>
-          <p>Your notes and passwords can be sorted by color, update or creation date, or randomly. Want to share your notes with someone else? No problem!, with just a few clicks, they can see what you shared with them!</p>
+          <h2 class="display-4">Issues with your data?</h2>
+          <p>Don't worry!, the support service at MyOwnSpace will be happy to provide you with as much help as they can. Whether it is with data recovery or any questions you might have, we are happy to help!.</p>
         </div>
       </div>
     </div>
@@ -102,40 +107,15 @@
     <div class="row align-items-center">
       <div class="col-lg-6 order-lg-2">
         <div class="p-5">
-          <img class="img-fluid rounded-circle" src="img/03.jpg" alt="">
+          <%= image_tag 'Landing-05.jpg', class: "img-fluid rounded-circle" %>
         </div>
       </div>
       <div class="col-lg-6 order-lg-1">
         <div class="p-5">
-          <h2 class="display-4">And the unorganized ones!</h2>
-          <span class="badge badge-yellow">..</span> Yellow <br>
-          <span class="badge badge-black">..</span> Black <br>
-          <span class="badge badge-grey">..</span> Grey <br>
-          <span class="badge badge-red">..</span> Red <br>
-          <span class="badge badge-green">..</span> Green <br>
-          <span class="badge badge-purple">..</span> Purple <br>
-          <span class="badge badge-orange">..</span> Orange <br>
-          <span class="badge badge-white">..</span> White <br>
-          <span class="badge badge-blue">..</span> Blue <br>
-          <i class="badge badge-blue">..</i> Blue
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="container">
-    <div class="row align-items-center">
-      <div class="col-lg-6">
-        <div class="p-5">
-          <img class="img-fluid rounded-circle" src="img/02.jpg" alt="">
-        </div>
-      </div>
-      <div class="col-lg-6">
-        <div class="p-5">
-          <h2 class="display-4">For the organized ones</h2>
-          <p>Your notes and passwords can be sorted by color, update or creation date, or randomly. Want to share your notes with someone else? No problem!, with just a few clicks, they can see what you shared with them!</p>
+          <h2 class="display-4">With you, wherever you go</h2>
+          <p>Soon, the team at MyOwnSpace will be releasing the downloadable app for the Google Play Store and Apple's App Store, so you can keep track of all your information, even without internet connection!.</p>
+          <%=link_to image_tag("download-on-google.png", height: 64, width: 182), root_path %>
+          <%=link_to image_tag("download-on-apple.png", height: 54, width: 182), root_path %>
         </div>
       </div>
     </div>
@@ -147,89 +127,34 @@
     <div class="row align-items-center">
       <div class="col-lg-6 order-lg-2">
         <div class="p-5">
-          <img class="img-fluid rounded-circle" src="img/03.jpg" alt="">
+          <%= image_tag 'Landing-06.png', class: "img-fluid rounded-circle" %>
         </div>
       </div>
       <div class="col-lg-6 order-lg-1">
         <div class="p-5">
-          <h2 class="display-4">And the unorganized ones!</h2>
-          <span class="badge badge-yellow">..</span> Yellow <br>
-          <span class="badge badge-black">..</span> Black <br>
-          <span class="badge badge-grey">..</span> Grey <br>
-          <span class="badge badge-red">..</span> Red <br>
-          <span class="badge badge-green">..</span> Green <br>
-          <span class="badge badge-purple">..</span> Purple <br>
-          <span class="badge badge-orange">..</span> Orange <br>
-          <span class="badge badge-white">..</span> White <br>
-          <span class="badge badge-blue">..</span> Blue <br>
-          <i class="badge badge-blue">..</i> Blue
+          <h2 class="display-4">High-security encryption</h2>
+          <p>With military-grade encryption, even in case of a cyber attack, your information cannot be stolen. The high-security end-to-end encryption allows you <b>(and only you)</b> to see your information.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 
-<h1>Este será el landing</h1>
-<%= image_tag 'logo.png' %>
-<h1>Y estará bien bueno</h1>
-<span class="badge badge-yellow">..</span> Yellow <br>
-<span class="badge badge-black">..</span> Black <br>
-<span class="badge badge-grey">..</span> Grey <br>
-<span class="badge badge-red">..</span> Red <br>
-<span class="badge badge-green">..</span> Green <br>
-<span class="badge badge-purple">..</span> Purple <br>
-<span class="badge badge-orange">..</span> Orange <br>
-<span class="badge badge-white">..</span> White <br>
-<span class="badge badge-blue">..</span> Blue <br>
-<i class="badge badge-blue">..</i> Blue
-<br>
-<br>
-<div class="container-fluid rounded-top rounded-lg">
-<br>
-<br>
-  <div class="row">
-    <div class="col-sm-6">
-      <div class="jumbotron">
-        <h1 class="display-4">Hello, world!</h1>
-        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-        <hr class="my-4">
-        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+<section>
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+        <div class="p-5">
+          <%= image_tag 'Landing-07.jpg', class: "img-fluid rounded-circle" %>
+        </div>
       </div>
-    </div>
-    <br>
-    <div class="col-sm-6">
-      <div class="jumbotron">
-        <h1 class="display-4">Hello, world!</h1>
-        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-        <hr class="my-4">
-        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-      </div>
-    </div>
-    <br>
-  </div>
-  <div class="row">
-    <div class="col-sm-6">
-      <div class="jumbotron">
-        <h1 class="display-4">Hello, world!</h1>
-        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-        <hr class="my-4">
-        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-      </div>
-    </div>
-    <div class="col-sm-6">
-      <div class="jumbotron">
-        <h1 class="display-4">Hello, world!</h1>
-        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-        <hr class="my-4">
-        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+      <div class="col-lg-6">
+        <div class="p-5">
+          <h2 class="display-4">Multi-platform!</h2>
+          <p>You can view all your events, passwords and notes in any device that has a screen on it!. Your phone, notebook, computer, TV, smartwatch, anything.</p>
+        </div>
       </div>
     </div>
   </div>
-  <br>
-</div>
--->
+</section>
+<br>

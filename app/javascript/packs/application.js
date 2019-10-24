@@ -2,21 +2,20 @@
 // present in this directory. You're encouraged to place your actual application logic in
 // a relevant structure within app/javascript and only use these pack files to reference
 // that code so it'll be compiled.
-//= require jquery/src/jquery
-//= require moment/src/moment
-//= require fullcalendar/dist/fullcalendar
 
 require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
-
-require('jquery')
-require('moment/src/moment')
-require('fullcalendar/dist/fullcalendar')
+require("jquery/src/jquery")
 
 require("packs/infos.js.erb")
 require("packs/notes.js.erb")
+
+require("moment/src/moment")
+require("moment/src/moment")
+require("moment/src/moment")
+require("fullcalendar/dist/fullcalendar")
 
 require("trix")
 require("@rails/actiontext")
