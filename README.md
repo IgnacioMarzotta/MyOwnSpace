@@ -6,19 +6,32 @@ MyOwnSpace is a web-app developed as final-career project for Full-Stack develop
 * Rails Version: 6.0.0
 
 Gems included/used:
+(From most to least important)
+* attr_encrypted
 * Devise
-* Faker(Development only)
+* ActiveStorage
+* Omiauth (Facebook, Twitter & Google)
 * ActiveAdmin
 * ActionText
-* Omiauth
-* PostgreSQL(For Release)
-* SQLite3(For development)
-* God
-* Emoji
-* ActiveStorage
+* Chartkick
+* Groupdate
 * ReCaptcha
 * RQRCode
-* BCrypt(For end-to-end data encryption)
+* God
+* Emoji
+* Faker(Development only)
+
+Database:
+* PostgreSQL(For Release)
+* SQLite3(For development)
+
+Libraries:
+* jQuery(+ AJAX)
+* Moment
+* FullCalendar
+* Turbolinks
+* Webpacker
+* Trix
 
 ActiveAdmin is used to supervise users in the sense of last login, last-login-ip and their current status in the platform. Admins cannot view/modify any user data, such as notes, passwords & calendar information.
 
@@ -29,4 +42,5 @@ Simplified application initialization(Depending on the platform):
 * Reset the database
 * Run pending migrations
 * Run correspondent seeds
-* Initialize application 
+* Initialize application
+* BodyColor adding can be done through ActiveAdmin, DON'T RUN SEEDS AGAIN ONCE DEPLOYED.
