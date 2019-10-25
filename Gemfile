@@ -22,8 +22,6 @@ gem 'jbuilder', '~> 2.7'
 # gem 'bcrypt', '~> 3.1.7'
 
 #All Omniauth gems
-gem 'omniauth-google-oauth2'
-gem 'omniauth-twitter'
 gem 'omniauth-facebook'
 
 #All gems related to ActiveAdmin
