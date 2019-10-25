@@ -21,9 +21,6 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
-#All Omniauth gems
-gem 'omniauth-facebook'
-
 #All gems related to ActiveAdmin
 gem 'activeadmin'
 gem 'groupdate'
