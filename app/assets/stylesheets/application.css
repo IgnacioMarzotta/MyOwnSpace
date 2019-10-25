@@ -11,8 +11,8 @@
  * It is generally better to create a new file per style scope.
  *
  *= require_self
+ *= require actiontext.scss
  */
-
 /*******************************************************************************/
 /* ATTRIBUTES */
 
@@ -92,19 +92,6 @@ table
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-}
-
-.dropdown-separator
-{
-    border-top: 1px solid #FC6E20!important;
-}
-
-.border-dropdown
-{
-    border-top: 1px solid #FC6E20!important;
-    border-bottom: 1px solid #FC6E20!important;
-    border-right: 1px solid #FC6E20!important;
-    border-left: 1px solid #FC6E20!important;
 }
 
 .border-bottom-navbar

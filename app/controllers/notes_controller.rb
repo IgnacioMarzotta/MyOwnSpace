@@ -1,5 +1,5 @@
 class NotesController < ApplicationController
-  before_action :set_note, only: [:show, :edit, :update, :destroy]
+  before_action :set_note, only: [:show, :edit, :update, :destroy, :recycle]
   before_action :authenticate_user!
   # GET /notes
   # GET /notes.json
@@ -27,7 +27,7 @@ class NotesController < ApplicationController
   def create
     @note = Note.new(note_params)
     @note.user = current_user
-    if(@note.title == "")
+    if(@note.title == "" || @note.title == " ")
       @note.title = "Note"
     end
     respond_to do |format|
@@ -41,6 +41,44 @@ class NotesController < ApplicationController
       end
     end
   end
+
+  def recyclebin
+    @recycled_notes = Note.where(user: current_user, recycled: true)
+  end
+
+  def restore
+    @note.recycled = false
+    respond_to do |format|
+      if @note.save
+        format.html { redirect_to @note, notice: 'Note was successfully updated.' }
+        format.json { render :show, status: :ok, location: @note }
+        format.js { }
+      else
+        format.html { render :edit }
+        format.json { render json: @note.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  def recycle
+    @note.recycled = true
+    respond_to do |format|
+      if (@note.save)
+        format.html { redirect_to @note, notice: 'Note was successfully updated.' }
+        format.json { render :show, status: :ok, location: @note }
+        format.js { }
+      else
+        format.html { render :edit }
+        format.json { render json: @note.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  def clean
+    notes = Note.where(user: current_user, recycled: true)
+    notes.destroy_all
+    redirect_to notes_path, notice: 'Recycling bin was successfully emptied.'
+ end
 
   # PATCH/PUT /notes/1
   # PATCH/PUT /notes/1.json
@@ -63,7 +101,7 @@ class NotesController < ApplicationController
     respond_to do |format|
       format.html { redirect_to notes_url, notice: 'Note was successfully destroyed.' }
       format.json { head :no_content }
-      format.js
+      format.js {}
     end
   end
 

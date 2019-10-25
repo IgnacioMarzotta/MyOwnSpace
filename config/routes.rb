@@ -7,8 +7,11 @@ Rails.application.routes.draw do
   resources :users
   resources :notes
   resources :bodycolors
+  get 'clean', to: 'notes#clean'
+  get 'recyclebin', to: 'notes#recyclebin'
   get 'bodycolor/create'
   get 'calendar/index', as: 'calendar', to: 'calendar#index'
-  post 'users/:user_id/notes', to: 'notes#create'
+  get 'notes/:id/recycle', as:'recycle_note', to: 'notes#recycle'
+  get 'notes/:id/restore', as:'restore_note', to: 'notes#restore'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

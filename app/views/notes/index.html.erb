@@ -2,21 +2,17 @@
   <div class="container border border-secondary" style="height:100vh;">
     <div class="mb-3">
       <h1 style="text-align: center;">It seems that you don't have any notes!</h1>
-      <h4 style="text-align: center;">If you had any notes, check the search bar (in case you have any active filters) or the recycling bin</h4>
+      <p style="text-align: center;"><b>Tip: If you had any notes, check the search bar (in case you have any active filters) or the recycling bin.</b></p>
+      <hr>
       <br>
-      <%=link_to image_tag("recycle.png", width: 28, height: 28), root_path, class: 'btn btn-lg btn-outline-success float-right' %>
+      <%=link_to image_tag("recycle.png", width: 28, height: 28), notes_recyclebin_path, class: 'btn btn-lg btn-outline-success float-right' %>
       <%= link_to 'Create your first note!', new_note_path, class: 'btn btn-lg btn-success mx-auto' %>
     </div>
   </div>
 <% else %>
-  <div class="container border border-secondary" style="
-    <% if(@nonrecycled_notes.count <= 3) %>
-      <%= "height:100%;" %>
-    <% else %>
-      <%= " " %>
-    <% end %>">
+  <div class="container border border-secondary" style="<% if(@nonrecycled_notes.count < 4) %><%= "height:100vh;" %><% else %><%= " " %><% end %>">
     <br>
-    <%=link_to image_tag("recycle.png", width: 28, height: 28), root_path, class: 'btn btn-lg btn-outline-success float-right' %>
+    <%=link_to image_tag("recycle.png", width: 28, height: 28), recyclebin_path, class: 'btn btn-lg btn-outline-success float-right' %>
     <h1 style="text-align: center;">Your notes</h1>
     <hr>
     <div class="card-columns m-3">

@@ -1,0 +1,33 @@
+<div class="container" style="height:100vh;">
+    <br>
+    <% if(@recycled_notes.count > 0)%>
+    <table class="table table-hover">
+        <thead class="thead-light">
+        <tr>
+            <th scope="col">Title</th>
+            <th scope="col">Description</th>
+            <th scope="col">Restore?</th>
+            <th scope="col">Delete</th>
+        </tr>
+        </thead>
+        <tbody class="bg-light">
+        <% @recycled_notes.each do |note|%>
+            <tr>
+            <td><b><%= note.title%></b></td>
+            <td><%= note.description %></td>
+            <td><%=link_to image_tag("restore.png", width: 28, height: 28), restore_note_path(note), data: {remote: true} %></td>
+            <td><%=link_to image_tag("delete.png", width: 28, height: 28), note, method: :delete, data: {remote: true} %></td>
+            </tr>
+        <% end %>
+        </tbody>
+    </table>
+    <% else %>
+        <br>
+        <div class="mx-auto">
+            <%= image_tag 'empty-recycling-bin.png', width: 256, height: 256 %>
+        </div>
+        <br>
+        <br>
+        <h2 class="text-dark" style="text-align: center;"><b> It seems that your Recycling bin is empty!</b></h2>
+    <% end %>
+</div>

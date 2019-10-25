@@ -25,8 +25,9 @@
       <div class="row row-30">
         <div class="col-md-4 col-xl-5">
           <div class="pr-xl-4"><a class="brand" href="index.html"><img class="brand-logo-light" src="images/agency/logo-inverse-140x37.png" alt="" width="140" height="37" srcset="images/agency/logo-retina-inverse-280x74.png 2x"></a>
-            <p>MyOwnSpace, your own space, for anything you need</p>
+            <p><b>MyOwnSpace, your own space, for anything you need</b></p>
             <p class="rights"><span>© </span><span class="copyright-year">2019</span><span> </span><span>Ignacio Marzotta</span><span>. </span><span>All Rights Reserved.</span></p>
+            <p>MyOwnSpace version: beta-0.82</p>
           </div>
         </div>
         <div class="col-md-4">
@@ -43,13 +44,13 @@
         <div class="col-md-4 col-xl-3">
           <h5>Links</h5>
           <ul class="nav-list">
-            <li><%= link_to 'Home', root_path %></li>
+            <li><%= link_to 'Notes', new_user_session_path%></li>
           </ul>
           <ul class="nav-list">
-            <li><%= link_to 'Calendar', root_path %></li>
+            <li><%= link_to 'Passwords', new_user_session_path %></li>
           </ul>
           <ul class="nav-list">
-            <li><%= link_to 'Notes', root_path %></li>
+            <li><%= link_to 'Calendar', new_user_session_path %></li>
           </ul>
         </div>
       </div>
