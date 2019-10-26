@@ -35,6 +35,14 @@
     }
 }
 
+/* This piece of code fixed an issue in each single page */
+html 
+{
+    height: auto;
+    min-height: 100%;
+}
+/* Thanks StackOverflow :) */
+
 body
 {
     z-index: 0;
