@@ -1,3 +1,6 @@
+<%= content_for :head do %>
+  <%= stylesheet_link_tag 'notes.css' %>
+<% end %>
 <% if (@nonrecycled_notes.count == 0) %>
   <div class="container border border-secondary">
     <div class="mb-3">
