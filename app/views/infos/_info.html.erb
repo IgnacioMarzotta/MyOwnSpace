@@ -1,7 +1,7 @@
 <div class="card rounded-bottom m-3 <%= info.bodycolor.value%>" id="info_<%= info.id %>">
   <div class="card-header"><h5 class="card-title"><b><%= info.servicename[0..30]%></b></h5></div>
   <div class="card-body">
-    <p class="card-text"><b>Username:</b> <%= info.nickname[0..20] %></p>
+    <p class="card-text"><b>Nickname:</b> <%= info.nickname[0..20] %></p>
     <a tabindex="0" class="btn" role="button" data-toggle="popover" data-trigger="focus" title="Your data is secure" data-content="This information in completely secure, access it with the button below to"><%= image_tag 'lock2.png', class: 'img-fluid' %></a>
     <hr>
     <%=link_to image_tag("delete.png", width: 36 , height: 36), info, class: 'card-link float-left', method: :delete, data: { confirm: 'Are you sure? This password cannot be recovered after this', remote: true} %>

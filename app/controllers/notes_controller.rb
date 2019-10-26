@@ -52,7 +52,7 @@ class NotesController < ApplicationController
       if @note.save
         format.html { redirect_to @note, notice: 'Note was successfully updated.' }
         format.json { render :show, status: :ok, location: @note }
-        format.js { }
+        format.js
       else
         format.html { render :edit }
         format.json { render json: @note.errors, status: :unprocessable_entity }
@@ -101,7 +101,7 @@ class NotesController < ApplicationController
     respond_to do |format|
       format.html { redirect_to notes_url, notice: 'Note was successfully destroyed.' }
       format.json { head :no_content }
-      format.js {}
+      format.js
     end
   end
 
