@@ -6,8 +6,8 @@
  
 body 
 {
-  background: rgb(255,255,255);
-  background: linear-gradient(208deg, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 100%);
+  background: rgb(255,132,0);
+  background: linear-gradient(177deg, rgba(255,132,0,0.8547794117647058) 0%, rgba(41,28,194,0.773546918767507) 54%, rgba(189,0,146,0.8799894957983193) 100%);
   font-family: 'Lato';
 }
 
