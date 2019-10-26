@@ -1,4 +1,3 @@
-<%= stylesheet_link_tag 'landing.css' %>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom-navbar">
   <ul class="navbar-nav mx-auto">
     <li class="nav-item">
@@ -14,7 +13,7 @@
             <div class="input-group-prepend">
               <span class="input-group-text" id="basic-addon1"><%=link_to image_tag("home.png", width: 18, height: 18), root_path %></a></span>
             </div>
-            <%= text_field_tag :note_search %>
+            <%= text_field_tag :note_search, "", placeholder: 'Search a note by title', class: 'form-control' %>
             <div class="input-group-prepend">
               <span class="input-group-text rounded-right" id="basic-addon2"><%=link_to image_tag("plus.png", width: 22, height: 22), new_note_path %></span>
             </div>
@@ -37,7 +36,7 @@
             <div class="input-group-prepend">
               <span class="input-group-text" id="basic-addon1"><%=link_to image_tag("home.png", width: 18, height: 18), root_path %></a></span>
             </div>
-              <%= text_field_tag :info_search %>
+              <%= text_field_tag :info_search, "", placeholder: 'Search by service', class: 'form-control' %>
             <div class="input-group-prepend">
               <span class="input-group-text rounded-right" id="basic-addon2"><%=link_to image_tag("plus.png", width: 22, height: 22), new_info_path %></span>
             </div>
