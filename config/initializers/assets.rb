@@ -16,3 +16,4 @@ Rails.application.config.assets.paths << Rails.root.join("vendor", "assets", "co
 
 Rails.application.config.assets.precompile += %w( application.js chartkick.js )
 Rails.application.config.assets.precompile += %w( landing.css notes.css infos.css )
+
