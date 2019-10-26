@@ -1,5 +1,5 @@
 <% if (@nonrecycled_notes.count == 0) %>
-  <div class="container border border-secondary" style="height:100vh;">
+  <div class="container border border-secondary">
     <div class="mb-3">
       <h1 style="text-align: center;">It seems that you don't have any notes!</h1>
       <p style="text-align: center;"><b>Tip: If you had any notes, check the search bar (in case you have any active filters) or the recycling bin.</b></p>
@@ -10,7 +10,7 @@
     </div>
   </div>
 <% else %>
-  <div class="container border border-secondary" style="<% if(@nonrecycled_notes.count < 4) %><%= "height:100vh;" %><% else %><%= " " %><% end %>">
+  <div class="container border border-secondary">
     <br>
     <%=link_to image_tag("recycle.png", width: 28, height: 28), recyclebin_path, class: 'btn btn-lg btn-outline-success float-right' %>
     <h1 style="text-align: center;">Your notes</h1>
