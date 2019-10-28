@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :infos
   resources :users
   resources :notes
+  resources :events
   resources :bodycolors
   get 'clean', to: 'notes#clean'
   get 'recyclebin', to: 'notes#recyclebin'

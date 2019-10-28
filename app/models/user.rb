@@ -6,5 +6,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :notes
   has_many :infos
+  has_many :events
   validates :username, length: {maximum: 10}
 end

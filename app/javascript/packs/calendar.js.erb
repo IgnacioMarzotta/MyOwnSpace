@@ -1,0 +1,21 @@
+import $ from 'jquery';
+import 'fullcalendar';
+
+$(document).on('ready turbolinks:load', function()
+{
+    //AJAX Event call
+    var events
+    $.ajax({
+        type: "get",
+        url: "/events",
+        dataType: "json",
+        success: function(data)
+        {
+            //FullCalendar
+            events = data
+            $('#calendar').fullCalendar({
+                events: events
+            })
+        }
+    });
+})

@@ -2,7 +2,7 @@
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <% if(user_signed_in?)%>
     <br>
-    <h3 class="brand-color" style="text-align: center;">Hi, <%= truncate(current_user.username, length: 15) %> !</h3>
+    <h3 class="brand-color" style="text-align: center;">Hi, <%= truncate(current_user.username, length: 15) %></h3>
     <hr>
     <%= link_to 'My Profile', user_path(current_user) %>
     <%= link_to 'Friends', root_path %>
@@ -13,6 +13,7 @@
     <hr>
     <%= link_to 'Log-out', destroy_user_session_path, method: :delete %>
   <% else %>
+    <h3 class="brand-color" style="text-align: center;">Welcome, guest</h3>
     <%= link_to 'Log-in', new_user_session_path %>
     <%= link_to 'Register', new_user_registration_path %>
   <% end %>

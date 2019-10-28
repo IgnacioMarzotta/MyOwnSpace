@@ -1,12 +1,5 @@
-import $ from 'jquery';
-import 'fullcalendar';
-
 $(document).on('ready turbolinks:load', function()
 {
-    //FullCalendar    
-    $('#calendar').fullCalendar({
-    })
-
     $("input[name='note_search']").keyup(function(){
         var note_search = $(this).val() 
         // Filter
