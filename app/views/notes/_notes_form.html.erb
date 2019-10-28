@@ -1,3 +1,4 @@
+<%= stylesheet_link_tag 'notes.css' %>
 <br>
   <div class="form-margin">
     <%= form_with(model: @note, local: true) do |f| %>
@@ -9,11 +10,8 @@
       <% end %>">
         <div class="form-group">
           <div class="row">
-            <div class="col-md-6 mb-3">
+            <div class="col-md-7 mb-3">
               <%= f.text_field :title, class: "form-control", placeholder: "Title", maxlength: 64%>
-            </div>
-            <div class="col-md-1 mb-3">
-              <p class="btn btn-sm btn-secondary rounded-circle"> ¿  ? </p>
             </div>
             <div class="col-md-2 mb-3">
               <%= f.select :bodycolor_id, Bodycolor.all.collect{|x| [sanitize(x.name).html_safe, x.id]}, {}, class: "form-control", id: :note_bodycolor_id, prompt: "Select a colour" %>

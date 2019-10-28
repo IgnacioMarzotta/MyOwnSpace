@@ -21,7 +21,8 @@
         </form>
       <!-- User in notes/new -->
       <% elsif (current_page?(new_note_path))%>
-        <%= link_to 'Back to your notes', notes_path, class: 'btn btn-outline-secondary' %>
+        <%= link_to 'Back to your notes', notes_path, class: 'btn btn-outline-secondary mr-5 rounded rounded-pill' %>
+        <button class="btn btn-outline-secondary rounded-pill ml-5" id="more-info"> Info </button>
       <!-- User in infos/new -->
       <% elsif (current_page?(new_info_path))%>
         <%= link_to 'Back to your passwords', infos_path, class: 'btn btn-outline-secondary' %>

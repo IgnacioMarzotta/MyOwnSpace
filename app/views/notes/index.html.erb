@@ -1,28 +1,27 @@
-<%= stylesheet_link_tag 'notes.css' %>
-
-<%= content_for :head do %>
-<% end %>
-<% if (@nonrecycled_notes.count == 0) %>
-  <div class="container border border-secondary">
-    <div class="mb-3">
-      <h1 style="text-align: center;">It seems that you don't have any notes!</h1>
-      <p style="text-align: center;"><b>Tip: If you had any notes, check the search bar (in case you have any active filters) or the recycling bin.</b></p>
-      <hr>
+<div class="layer one show">
+  <%= stylesheet_link_tag 'notes.css' %>
+  <% if (@nonrecycled_notes.count == 0) %>
+    <div class="container border border-secondary">
+      <div class="mb-3">
+        <h1 style="text-align: center;">It seems that you don't have any notes!</h1>
+        <p style="text-align: center;"><b>Tip: If you had any notes, check the search bar (in case you have any active filters) or the recycling bin.</b></p>
+        <hr>
+        <br>
+        <%=link_to image_tag("recycle.png", width: 28, height: 28), notes_recyclebin_path, class: 'btn btn-lg btn-outline-success float-right' %>
+        <%= link_to 'Create your first note!', new_note_path, class: 'btn btn-lg btn-success mx-auto' %>
+      </div>
+    </div>
+  <% else %>
+    <div class="container border border-secondary">
       <br>
-      <%=link_to image_tag("recycle.png", width: 28, height: 28), notes_recyclebin_path, class: 'btn btn-lg btn-outline-success float-right' %>
-      <%= link_to 'Create your first note!', new_note_path, class: 'btn btn-lg btn-success mx-auto' %>
+      <%=link_to image_tag("recycle.png", width: 28, height: 28), recyclebin_path, class: 'btn btn-lg btn-outline-success float-right' %>
+      <h1 style="text-align: center;">Your notes</h1>
+      <hr>
+      <div class="card-columns m-3">
+        <%= render @nonrecycled_notes %>
+      </div>
     </div>
-  </div>
-<% else %>
-  <div class="container border border-secondary">
     <br>
-    <%=link_to image_tag("recycle.png", width: 28, height: 28), recyclebin_path, class: 'btn btn-lg btn-outline-success float-right' %>
-    <h1 style="text-align: center;">Your notes</h1>
-    <hr>
-    <div class="card-columns m-3">
-      <%= render @nonrecycled_notes %>
-    </div>
-  </div>
-  <br>
-  <br>
-<% end %>
+    <br>
+  <% end %>
+</div>
