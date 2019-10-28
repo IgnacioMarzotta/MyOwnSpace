@@ -14,7 +14,16 @@ $(document).on('ready turbolinks:load', function()
             //FullCalendar
             events = data
             $('#calendar').fullCalendar({
-                events: events
+                events: events,
+                themeSystem: 'bootstrap4',
+                header: 
+                {
+                    left: 'prev,next today',
+                    center: 'title',
+                    right: 'month,agendaWeek,agendaDay,listMonth'
+                },
+                weekNumbers: true,
+                navLinks: true
             })
         }
     });
