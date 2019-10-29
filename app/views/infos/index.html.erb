@@ -1,11 +1,12 @@
 <%= stylesheet_link_tag 'infos.css' %>
 <% if (@infos.count == 0) %>
-  <div class="container border border-secondary">
-    <div class="mb-3">
-      <h1 style="text-align: center;">It seems that you don't have any passwords stored!</h1>
-      <br>
-      <%= link_to 'Create your first password!', new_info_path, class: 'btn btn-lg btn-success' %>
-    </div>
+  <div class="container border border-secondary" style="height: 100vh;">
+    <br>
+    <br>
+    <br>
+    <h1 style="text-align: center;">It seems that you don't have any passwords stored</h1>
+    <br>
+    <%= link_to 'Create your first password!', new_info_path, class: 'btn btn-success btn-lg btn-xl'%>
   </div>
 <% else %>
   <div class="container border border-secondary">
