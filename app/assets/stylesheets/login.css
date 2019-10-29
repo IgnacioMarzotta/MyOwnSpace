@@ -1,0 +1,4 @@
+body
+{
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(0,255,176,1) 0%, rgba(66,105,242,1) 90% );
+}

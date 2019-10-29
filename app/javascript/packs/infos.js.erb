@@ -1,5 +1,11 @@
 $(document).on('ready turbolinks:load', function(){
 
+  $('#lock').popover({
+      title: 'Your information is secure',
+      content: 'Your log-in information in this service is encrypted, to see it click the "Show" button down below.',
+      animation: true
+  })
+
   $("input[name='info_search']").keyup(function(){
   var info_search = $(this).val() 
   

@@ -7,7 +7,7 @@
       <br>
       <h1 class="masthead-heading mb-0 text-dark">MyOwnSpace</h1>
       <h2 class="masthead-subheading mb-0 text-dark">A space for yourself</h2>
-      <h4 class="text-dark">A secure password, note and event storage app.</h4>
+      <h4 class="text-dark">A secure password, note and calendar-event storage companion.</h4>
       <% if(user_signed_in?)%>
         <%= link_to 'Go to your notes!', notes_path, class: 'btn btn-outline-primary btn-xl rounded-pill mt-5 mb-5' %>
       <% else %>       
@@ -67,9 +67,8 @@
       </div>
       <div class="col-lg-6 order-lg-1">
         <div class="p-5">
-          <h2 class="display-4">For the creative ones</h2>
+          <h2 class="display-4">For <u>everyone</u></h2>
           <p>Colors for all types of moods or importances. Want another color in this line-up? No problem!, MyOwnSpace does monthly polls to add new colors sugested by users!. Want to see one of your own? Join us and participate!.</p>
-          <br>
           <br>
           <span class="badge badge-yellow">..</span> Yellow     
           <span class="badge badge-black">..</span> Black     
@@ -79,8 +78,7 @@
           <span class="badge badge-purple">..</span> Purple     
           <span class="badge badge-orange">..</span> Orange     
           <span class="badge badge-white border border-black">..</span> White     
-          <span class="badge badge-blue">..</span> Blue     
-          <i class="badge badge-blue">..</i> Blue     
+          <span class="badge badge-blue">..</span> Blue
         </div>
       </div>
     </div>
