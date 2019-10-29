@@ -16,7 +16,7 @@ ActiveAdmin.register Info do
   # end
   index do
     column :id
-    column :user_id.username
+    column :user_id
     column :servicename
     column :updated_at
     column :created_at

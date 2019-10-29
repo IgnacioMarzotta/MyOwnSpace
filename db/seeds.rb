@@ -5,12 +5,14 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Note.destroy_all
-Info.destroy_all
-Event.destroy_all
-Bodycolor.destroy_all
-User.destroy_all
-AdminUser.destroy_all
+if(Rails.env.development?)
+    Note.destroy_all
+    Info.destroy_all
+    Event.destroy_all
+    Bodycolor.destroy_all
+    User.destroy_all
+    AdminUser.destroy_all
+end
 
 Bodycolor.create(name: 'Yellow', value: 'bg-card-yellow border-top-yellow text-dark')
 Bodycolor.create(name: 'Blue', value: 'bg-card-blue border-top-blue text-dark')

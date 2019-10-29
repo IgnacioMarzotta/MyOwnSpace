@@ -3,3 +3,5 @@
 <br><br><br>
 <% user_growth = User.group_by_month(:created_at).count %>
 <%= pie_chart user_growth %>
+<%user_origin = User.group(:country).count%>
+<%= geo_chart user_origin %>

@@ -15,15 +15,19 @@ $(document).on('ready turbolinks:load', function()
             events = data
             $('#calendar').fullCalendar({
                 events: events,
-                editable: true,
+                eventClick: function( event, jsEvent, view ){
+                    window.$('#eventModal').modal('show');
+                },
                 eventDrop: function( event, delta, revertFunc, jsEvent, ui, view ) {
                     $.ajax({
                         type: "patch",
                         url: "/events/" + event.id,
                         dataType: "json",
-                        data: {event: {start: event.start.format()}, authenticity_token: "<%= form_authenticity_token %>"}
+                        beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token',  $('meta[name="csrf-token"]').attr('content'))},
+                        data: {event: {start: event.start.format()}}
                     })
                 },
+                editable: true,
                 themeSystem: 'bootstrap4',
                 header: 
                 {

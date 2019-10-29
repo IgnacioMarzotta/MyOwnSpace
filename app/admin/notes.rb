@@ -18,7 +18,6 @@ ActiveAdmin.register Note do
   index do
     column :id
     column :title
-    column :description
     column :user_id
     column :bodycolor_id
     column :recycled

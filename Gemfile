@@ -28,6 +28,7 @@ gem 'chartkick'
 
 #Gems related to notes
 gem 'actiontext'
+gem 'image_processing', '~> 1.2'
 
 #Gems related to infos
 gem "attr_encrypted", "~> 3.1.0"
