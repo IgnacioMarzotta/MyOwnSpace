@@ -1,0 +1,3 @@
+$(".modal-title").html("Editing <%= @event.title %>");
+$(".modal-body").html("<%= j render 'event_form', event: @event %>");
+$('.modal').modal();

@@ -23,8 +23,9 @@ gem 'jbuilder', '~> 2.7'
 
 #All gems related to ActiveAdmin
 gem 'activeadmin'
-gem 'groupdate'
 gem 'chartkick'
+gem 'groupdate'
+gem 'geocoder'
 
 #Gems related to notes
 gem 'actiontext'

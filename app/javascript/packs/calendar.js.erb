@@ -16,7 +16,11 @@ $(document).on('ready turbolinks:load', function()
             $('#calendar').fullCalendar({
                 events: events,
                 eventClick: function( event, jsEvent, view ){
-                    window.$('#eventModal').modal('show');
+                    window.$.ajax({
+                        type: "GET",
+                        url: "/events/" + event.id + "/edit",
+                        dataType: "script"
+                    })
                 },
                 eventDrop: function( event, delta, revertFunc, jsEvent, ui, view ) {
                     $.ajax({
