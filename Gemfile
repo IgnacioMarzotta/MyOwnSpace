@@ -29,7 +29,7 @@ gem 'geocoder'
 
 #Gems related to notes
 gem 'actiontext'
-gem 'image_processing', '~> 1.2'
+gem 'image_processing', '~> 1.12'
 
 #Gems related to infos
 gem "attr_encrypted", "~> 3.1.0"
